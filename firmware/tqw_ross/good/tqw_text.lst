@@ -1,0 +1,1513 @@
+GAS LISTING /tmp/ccmt9esf.s 			page 1
+
+
+   1               		.file	"tqw_text.c"
+   2               		.arch atmega8
+   3               	__SREG__ = 0x3f
+   4               	__SP_H__ = 0x3e
+   5               	__SP_L__ = 0x3d
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               	_PC_ = 2
+   9               		.stabs	"/home/ross/src/avr/tqw_ross/good/",100,0,0,.Ltext0
+  10               		.stabs	"tqw_text.c",100,0,0,.Ltext0
+  11               		.text
+  12               	.Ltext0:
+  13               		.stabs	"gcc2_compiled.",60,0,0,0
+  14               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  15               		.stabs	"char:t(0,2)=r(0,2);0;127;",128,0,0,0
+  16               		.stabs	"long int:t(0,3)=@s32;r(0,3);0020000000000;0017777777777;",128,0,0,0
+  17               		.stabs	"unsigned int:t(0,4)=r(0,4);0000000000000;0000000177777;",128,0,0,0
+  18               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0000000000000;0037777777777;",128,0,0,0
+  19               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  20               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0000000000000;01777777777777777777777;",128,0,0,
+  21               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  22               		.stabs	"short unsigned int:t(0,9)=r(0,9);0000000000000;0000000177777;",128,0,0,0
+  23               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  24               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  25               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"complex int:t(0,15)=s4real:(0,1),0,16;imag:(0,1),16,16;;",128,0,0,0
+  29               		.stabs	"complex float:t(0,16)=r(0,16);8;0;",128,0,0,0
+  30               		.stabs	"complex double:t(0,17)=r(0,17);8;0;",128,0,0,0
+  31               		.stabs	"complex long double:t(0,18)=r(0,18);8;0;",128,0,0,0
+  32               		.stabs	"__builtin_va_list:t(0,19)=*(0,20)=(0,20)",128,0,0,0
+  33               		.stabs	"_Bool:t(0,21)=@s8;-16;",128,0,0,0
+  34               		.stabs	"tqw_text.c",130,0,0,0
+  35               		.stabs	"tqw.h",130,0,0,0
+  36               		.stabs	"/usr/local/avr/include/inttypes.h",130,0,0,0
+  37               		.stabs	"int8_t:t(3,1)=(0,10)",128,0,24,0
+  38               		.stabs	"uint8_t:t(3,2)=(0,11)",128,0,25,0
+  39               		.stabs	"int16_t:t(3,3)=(0,1)",128,0,27,0
+  40               		.stabs	"uint16_t:t(3,4)=(0,4)",128,0,28,0
+  41               		.stabs	"int32_t:t(3,5)=(0,3)",128,0,30,0
+  42               		.stabs	"uint32_t:t(3,6)=(0,5)",128,0,31,0
+  43               		.stabs	"int64_t:t(3,7)=(0,6)",128,0,33,0
+  44               		.stabs	"uint64_t:t(3,8)=(0,7)",128,0,34,0
+  45               		.stabs	"intptr_t:t(3,9)=(3,3)",128,0,36,0
+  46               		.stabs	"uintptr_t:t(3,10)=(3,4)",128,0,37,0
+  47               		.stabn	162,0,0,0
+  48               		.stabs	"/usr/local/avr/include/io.h",130,0,0,0
+  49               		.stabs	"/usr/local/avr/include/io-avr.h",130,0,0,0
+  50               		.stabs	"/usr/local/avr/include/iom8.h",130,0,0,0
+  51               		.stabn	162,0,0,0
+  52               		.stabn	162,0,0,0
+  53               		.stabs	"/usr/local/avr/include/iomacros.h",130,0,0,0
+  54               		.stabn	162,0,0,0
+  55               		.stabn	162,0,0,0
+  56               		.stabs	"/usr/local/avr/include/string.h",130,0,0,0
+  57               		.stabs	"/usr/local/avr/lib/gcc-lib/avr/3.2/include/stddef.h",130,0,0,0
+GAS LISTING /tmp/ccmt9esf.s 			page 2
+
+
+  58               		.stabs	"size_t:t(9,1)=(0,4)",128,0,201,0
+  59               		.stabn	162,0,0,0
+  60               		.stabn	162,0,0,0
+  61               		.stabs	"/usr/local/avr/include/sig-avr.h",130,0,0,0
+  62               		.stabn	162,0,0,0
+  63               		.stabs	"/usr/local/avr/include/pgmspace.h",130,0,0,0
+  64               		.stabs	"/usr/local/avr/lib/gcc-lib/avr/3.2/include/stddef.h",130,0,0,0
+  65               		.stabn	162,0,0,0
+  66               		.stabs	"prog_void:t(11,1)=(11,2)=(11,2)",128,0,51,0
+  67               		.stabs	"prog_char:t(11,3)=(11,4)=@s8;r(11,4);-128;127;",128,0,52,0
+  68               		.stabs	"prog_uchar:t(11,5)=(11,6)=@s8;r(11,6);0;255;",128,0,53,0
+  69               		.stabs	"prog_int:t(11,7)=(11,8)=r(11,8);-32768;32767;",128,0,54,0
+  70               		.stabs	"prog_long:t(11,9)=(11,10)=@s32;r(11,10);0020000000000;0017777777777;",128,0,55,0
+  71               		.stabs	"prog_long_long:t(11,11)=(11,12)=@s64;r(11,12);01000000000000000000000;07777777777777777777
+  72               		.stabs	"/usr/local/avr/include/ina90.h",130,0,0,0
+  73               		.stabs	"/usr/local/avr/include/eeprom.h",130,0,0,0
+  74               		.stabs	"/usr/local/avr/lib/gcc-lib/avr/3.2/include/stddef.h",130,0,0,0
+  75               		.stabn	162,0,0,0
+  76               		.stabn	162,0,0,0
+  77               		.stabn	162,0,0,0
+  78               		.stabn	162,0,0,0
+  79               		.stabs	"TQWRotationInterruptFunc:t(2,1)=(2,2)=*(2,3)=f(0,20)",128,0,22,0
+  80               		.stabs	"TQWColumnInterruptFunc:t(2,4)=(2,2)",128,0,23,0
+  81               		.stabn	162,0,0,0
+  82               		.stabs	"font6x8.h",130,0,0,0
+  83               	.global	smallFont
+  84               		.section	.progmem.data,"a",@progbits
+  85               		.type	smallFont,@object
+  86               		.size	smallFont,564
+  87               	smallFont:
+  88 0000 00        		.byte	0
+  89 0001 00        		.byte	0
+  90 0002 06        		.byte	6
+  91 0003 5F        		.byte	95
+  92 0004 06        		.byte	6
+  93 0005 00        		.byte	0
+  94 0006 00        		.byte	0
+  95 0007 07        		.byte	7
+  96 0008 03        		.byte	3
+  97 0009 00        		.byte	0
+  98 000a 07        		.byte	7
+  99 000b 03        		.byte	3
+ 100 000c 00        		.byte	0
+ 101 000d 24        		.byte	36
+ 102 000e 7E        		.byte	126
+ 103 000f 24        		.byte	36
+ 104 0010 7E        		.byte	126
+ 105 0011 24        		.byte	36
+ 106 0012 00        		.byte	0
+ 107 0013 24        		.byte	36
+ 108 0014 2B        		.byte	43
+ 109 0015 6A        		.byte	106
+ 110 0016 12        		.byte	18
+ 111 0017 00        		.byte	0
+ 112 0018 00        		.byte	0
+ 113 0019 63        		.byte	99
+ 114 001a 13        		.byte	19
+GAS LISTING /tmp/ccmt9esf.s 			page 3
+
+
+ 115 001b 08        		.byte	8
+ 116 001c 64        		.byte	100
+ 117 001d 63        		.byte	99
+ 118 001e 00        		.byte	0
+ 119 001f 36        		.byte	54
+ 120 0020 49        		.byte	73
+ 121 0021 56        		.byte	86
+ 122 0022 20        		.byte	32
+ 123 0023 50        		.byte	80
+ 124 0024 00        		.byte	0
+ 125 0025 00        		.byte	0
+ 126 0026 07        		.byte	7
+ 127 0027 03        		.byte	3
+ 128 0028 00        		.byte	0
+ 129 0029 00        		.byte	0
+ 130 002a 00        		.byte	0
+ 131 002b 00        		.byte	0
+ 132 002c 3E        		.byte	62
+ 133 002d 41        		.byte	65
+ 134 002e 00        		.byte	0
+ 135 002f 00        		.byte	0
+ 136 0030 00        		.byte	0
+ 137 0031 00        		.byte	0
+ 138 0032 41        		.byte	65
+ 139 0033 3E        		.byte	62
+ 140 0034 00        		.byte	0
+ 141 0035 00        		.byte	0
+ 142 0036 00        		.byte	0
+ 143 0037 08        		.byte	8
+ 144 0038 3E        		.byte	62
+ 145 0039 1C        		.byte	28
+ 146 003a 3E        		.byte	62
+ 147 003b 08        		.byte	8
+ 148 003c 00        		.byte	0
+ 149 003d 08        		.byte	8
+ 150 003e 08        		.byte	8
+ 151 003f 3E        		.byte	62
+ 152 0040 08        		.byte	8
+ 153 0041 08        		.byte	8
+ 154 0042 00        		.byte	0
+ 155 0043 00        		.byte	0
+ 156 0044 E0        		.byte	-32
+ 157 0045 60        		.byte	96
+ 158 0046 00        		.byte	0
+ 159 0047 00        		.byte	0
+ 160 0048 00        		.byte	0
+ 161 0049 08        		.byte	8
+ 162 004a 08        		.byte	8
+ 163 004b 08        		.byte	8
+ 164 004c 08        		.byte	8
+ 165 004d 08        		.byte	8
+ 166 004e 00        		.byte	0
+ 167 004f 00        		.byte	0
+ 168 0050 60        		.byte	96
+ 169 0051 60        		.byte	96
+ 170 0052 00        		.byte	0
+ 171 0053 00        		.byte	0
+GAS LISTING /tmp/ccmt9esf.s 			page 4
+
+
+ 172 0054 00        		.byte	0
+ 173 0055 20        		.byte	32
+ 174 0056 10        		.byte	16
+ 175 0057 08        		.byte	8
+ 176 0058 04        		.byte	4
+ 177 0059 02        		.byte	2
+ 178 005a 00        		.byte	0
+ 179 005b 3E        		.byte	62
+ 180 005c 51        		.byte	81
+ 181 005d 49        		.byte	73
+ 182 005e 45        		.byte	69
+ 183 005f 3E        		.byte	62
+ 184 0060 00        		.byte	0
+ 185 0061 00        		.byte	0
+ 186 0062 42        		.byte	66
+ 187 0063 7F        		.byte	127
+ 188 0064 40        		.byte	64
+ 189 0065 00        		.byte	0
+ 190 0066 00        		.byte	0
+ 191 0067 62        		.byte	98
+ 192 0068 51        		.byte	81
+ 193 0069 49        		.byte	73
+ 194 006a 49        		.byte	73
+ 195 006b 46        		.byte	70
+ 196 006c 00        		.byte	0
+ 197 006d 22        		.byte	34
+ 198 006e 49        		.byte	73
+ 199 006f 49        		.byte	73
+ 200 0070 49        		.byte	73
+ 201 0071 36        		.byte	54
+ 202 0072 00        		.byte	0
+ 203 0073 18        		.byte	24
+ 204 0074 14        		.byte	20
+ 205 0075 12        		.byte	18
+ 206 0076 7F        		.byte	127
+ 207 0077 10        		.byte	16
+ 208 0078 00        		.byte	0
+ 209 0079 2F        		.byte	47
+ 210 007a 49        		.byte	73
+ 211 007b 49        		.byte	73
+ 212 007c 49        		.byte	73
+ 213 007d 31        		.byte	49
+ 214 007e 00        		.byte	0
+ 215 007f 3C        		.byte	60
+ 216 0080 4A        		.byte	74
+ 217 0081 49        		.byte	73
+ 218 0082 49        		.byte	73
+ 219 0083 30        		.byte	48
+ 220 0084 00        		.byte	0
+ 221 0085 01        		.byte	1
+ 222 0086 71        		.byte	113
+ 223 0087 09        		.byte	9
+ 224 0088 05        		.byte	5
+ 225 0089 03        		.byte	3
+ 226 008a 00        		.byte	0
+ 227 008b 36        		.byte	54
+ 228 008c 49        		.byte	73
+GAS LISTING /tmp/ccmt9esf.s 			page 5
+
+
+ 229 008d 49        		.byte	73
+ 230 008e 49        		.byte	73
+ 231 008f 36        		.byte	54
+ 232 0090 00        		.byte	0
+ 233 0091 06        		.byte	6
+ 234 0092 49        		.byte	73
+ 235 0093 49        		.byte	73
+ 236 0094 29        		.byte	41
+ 237 0095 1E        		.byte	30
+ 238 0096 00        		.byte	0
+ 239 0097 00        		.byte	0
+ 240 0098 6C        		.byte	108
+ 241 0099 6C        		.byte	108
+ 242 009a 00        		.byte	0
+ 243 009b 00        		.byte	0
+ 244 009c 00        		.byte	0
+ 245 009d 00        		.byte	0
+ 246 009e EC        		.byte	-20
+ 247 009f 6C        		.byte	108
+ 248 00a0 00        		.byte	0
+ 249 00a1 00        		.byte	0
+ 250 00a2 00        		.byte	0
+ 251 00a3 08        		.byte	8
+ 252 00a4 14        		.byte	20
+ 253 00a5 22        		.byte	34
+ 254 00a6 41        		.byte	65
+ 255 00a7 00        		.byte	0
+ 256 00a8 00        		.byte	0
+ 257 00a9 24        		.byte	36
+ 258 00aa 24        		.byte	36
+ 259 00ab 24        		.byte	36
+ 260 00ac 24        		.byte	36
+ 261 00ad 24        		.byte	36
+ 262 00ae 00        		.byte	0
+ 263 00af 00        		.byte	0
+ 264 00b0 41        		.byte	65
+ 265 00b1 22        		.byte	34
+ 266 00b2 14        		.byte	20
+ 267 00b3 08        		.byte	8
+ 268 00b4 00        		.byte	0
+ 269 00b5 02        		.byte	2
+ 270 00b6 01        		.byte	1
+ 271 00b7 59        		.byte	89
+ 272 00b8 09        		.byte	9
+ 273 00b9 06        		.byte	6
+ 274 00ba 00        		.byte	0
+ 275 00bb 3E        		.byte	62
+ 276 00bc 41        		.byte	65
+ 277 00bd 5D        		.byte	93
+ 278 00be 55        		.byte	85
+ 279 00bf 1E        		.byte	30
+ 280 00c0 00        		.byte	0
+ 281 00c1 7E        		.byte	126
+ 282 00c2 11        		.byte	17
+ 283 00c3 11        		.byte	17
+ 284 00c4 11        		.byte	17
+ 285 00c5 7E        		.byte	126
+GAS LISTING /tmp/ccmt9esf.s 			page 6
+
+
+ 286 00c6 00        		.byte	0
+ 287 00c7 7F        		.byte	127
+ 288 00c8 49        		.byte	73
+ 289 00c9 49        		.byte	73
+ 290 00ca 49        		.byte	73
+ 291 00cb 36        		.byte	54
+ 292 00cc 00        		.byte	0
+ 293 00cd 3E        		.byte	62
+ 294 00ce 41        		.byte	65
+ 295 00cf 41        		.byte	65
+ 296 00d0 41        		.byte	65
+ 297 00d1 22        		.byte	34
+ 298 00d2 00        		.byte	0
+ 299 00d3 7F        		.byte	127
+ 300 00d4 41        		.byte	65
+ 301 00d5 41        		.byte	65
+ 302 00d6 41        		.byte	65
+ 303 00d7 3E        		.byte	62
+ 304 00d8 00        		.byte	0
+ 305 00d9 7F        		.byte	127
+ 306 00da 49        		.byte	73
+ 307 00db 49        		.byte	73
+ 308 00dc 49        		.byte	73
+ 309 00dd 41        		.byte	65
+ 310 00de 00        		.byte	0
+ 311 00df 7F        		.byte	127
+ 312 00e0 09        		.byte	9
+ 313 00e1 09        		.byte	9
+ 314 00e2 09        		.byte	9
+ 315 00e3 01        		.byte	1
+ 316 00e4 00        		.byte	0
+ 317 00e5 3E        		.byte	62
+ 318 00e6 41        		.byte	65
+ 319 00e7 49        		.byte	73
+ 320 00e8 49        		.byte	73
+ 321 00e9 7A        		.byte	122
+ 322 00ea 00        		.byte	0
+ 323 00eb 7F        		.byte	127
+ 324 00ec 08        		.byte	8
+ 325 00ed 08        		.byte	8
+ 326 00ee 08        		.byte	8
+ 327 00ef 7F        		.byte	127
+ 328 00f0 00        		.byte	0
+ 329 00f1 00        		.byte	0
+ 330 00f2 41        		.byte	65
+ 331 00f3 7F        		.byte	127
+ 332 00f4 41        		.byte	65
+ 333 00f5 00        		.byte	0
+ 334 00f6 00        		.byte	0
+ 335 00f7 30        		.byte	48
+ 336 00f8 40        		.byte	64
+ 337 00f9 40        		.byte	64
+ 338 00fa 40        		.byte	64
+ 339 00fb 3F        		.byte	63
+ 340 00fc 00        		.byte	0
+ 341 00fd 7F        		.byte	127
+ 342 00fe 08        		.byte	8
+GAS LISTING /tmp/ccmt9esf.s 			page 7
+
+
+ 343 00ff 14        		.byte	20
+ 344 0100 22        		.byte	34
+ 345 0101 41        		.byte	65
+ 346 0102 00        		.byte	0
+ 347 0103 7F        		.byte	127
+ 348 0104 40        		.byte	64
+ 349 0105 40        		.byte	64
+ 350 0106 40        		.byte	64
+ 351 0107 40        		.byte	64
+ 352 0108 00        		.byte	0
+ 353 0109 7F        		.byte	127
+ 354 010a 02        		.byte	2
+ 355 010b 04        		.byte	4
+ 356 010c 02        		.byte	2
+ 357 010d 7F        		.byte	127
+ 358 010e 00        		.byte	0
+ 359 010f 7F        		.byte	127
+ 360 0110 02        		.byte	2
+ 361 0111 04        		.byte	4
+ 362 0112 08        		.byte	8
+ 363 0113 7F        		.byte	127
+ 364 0114 00        		.byte	0
+ 365 0115 3E        		.byte	62
+ 366 0116 41        		.byte	65
+ 367 0117 41        		.byte	65
+ 368 0118 41        		.byte	65
+ 369 0119 3E        		.byte	62
+ 370 011a 00        		.byte	0
+ 371 011b 7F        		.byte	127
+ 372 011c 09        		.byte	9
+ 373 011d 09        		.byte	9
+ 374 011e 09        		.byte	9
+ 375 011f 06        		.byte	6
+ 376 0120 00        		.byte	0
+ 377 0121 3E        		.byte	62
+ 378 0122 41        		.byte	65
+ 379 0123 51        		.byte	81
+ 380 0124 21        		.byte	33
+ 381 0125 5E        		.byte	94
+ 382 0126 00        		.byte	0
+ 383 0127 7F        		.byte	127
+ 384 0128 09        		.byte	9
+ 385 0129 09        		.byte	9
+ 386 012a 19        		.byte	25
+ 387 012b 66        		.byte	102
+ 388 012c 00        		.byte	0
+ 389 012d 26        		.byte	38
+ 390 012e 49        		.byte	73
+ 391 012f 49        		.byte	73
+ 392 0130 49        		.byte	73
+ 393 0131 32        		.byte	50
+ 394 0132 00        		.byte	0
+ 395 0133 01        		.byte	1
+ 396 0134 01        		.byte	1
+ 397 0135 7F        		.byte	127
+ 398 0136 01        		.byte	1
+ 399 0137 01        		.byte	1
+GAS LISTING /tmp/ccmt9esf.s 			page 8
+
+
+ 400 0138 00        		.byte	0
+ 401 0139 3F        		.byte	63
+ 402 013a 40        		.byte	64
+ 403 013b 40        		.byte	64
+ 404 013c 40        		.byte	64
+ 405 013d 3F        		.byte	63
+ 406 013e 00        		.byte	0
+ 407 013f 1F        		.byte	31
+ 408 0140 20        		.byte	32
+ 409 0141 40        		.byte	64
+ 410 0142 20        		.byte	32
+ 411 0143 1F        		.byte	31
+ 412 0144 00        		.byte	0
+ 413 0145 3F        		.byte	63
+ 414 0146 40        		.byte	64
+ 415 0147 3C        		.byte	60
+ 416 0148 40        		.byte	64
+ 417 0149 3F        		.byte	63
+ 418 014a 00        		.byte	0
+ 419 014b 63        		.byte	99
+ 420 014c 14        		.byte	20
+ 421 014d 08        		.byte	8
+ 422 014e 14        		.byte	20
+ 423 014f 63        		.byte	99
+ 424 0150 00        		.byte	0
+ 425 0151 07        		.byte	7
+ 426 0152 08        		.byte	8
+ 427 0153 70        		.byte	112
+ 428 0154 08        		.byte	8
+ 429 0155 07        		.byte	7
+ 430 0156 00        		.byte	0
+ 431 0157 71        		.byte	113
+ 432 0158 49        		.byte	73
+ 433 0159 45        		.byte	69
+ 434 015a 43        		.byte	67
+ 435 015b 00        		.byte	0
+ 436 015c 00        		.byte	0
+ 437 015d 00        		.byte	0
+ 438 015e 7F        		.byte	127
+ 439 015f 41        		.byte	65
+ 440 0160 41        		.byte	65
+ 441 0161 00        		.byte	0
+ 442 0162 00        		.byte	0
+ 443 0163 02        		.byte	2
+ 444 0164 04        		.byte	4
+ 445 0165 08        		.byte	8
+ 446 0166 10        		.byte	16
+ 447 0167 20        		.byte	32
+ 448 0168 00        		.byte	0
+ 449 0169 00        		.byte	0
+ 450 016a 41        		.byte	65
+ 451 016b 41        		.byte	65
+ 452 016c 7F        		.byte	127
+ 453 016d 00        		.byte	0
+ 454 016e 00        		.byte	0
+ 455 016f 04        		.byte	4
+ 456 0170 02        		.byte	2
+GAS LISTING /tmp/ccmt9esf.s 			page 9
+
+
+ 457 0171 01        		.byte	1
+ 458 0172 02        		.byte	2
+ 459 0173 04        		.byte	4
+ 460 0174 80        		.byte	-128
+ 461 0175 80        		.byte	-128
+ 462 0176 80        		.byte	-128
+ 463 0177 80        		.byte	-128
+ 464 0178 80        		.byte	-128
+ 465 0179 80        		.byte	-128
+ 466 017a 00        		.byte	0
+ 467 017b 00        		.byte	0
+ 468 017c 03        		.byte	3
+ 469 017d 07        		.byte	7
+ 470 017e 00        		.byte	0
+ 471 017f 00        		.byte	0
+ 472 0180 00        		.byte	0
+ 473 0181 20        		.byte	32
+ 474 0182 54        		.byte	84
+ 475 0183 54        		.byte	84
+ 476 0184 54        		.byte	84
+ 477 0185 78        		.byte	120
+ 478 0186 00        		.byte	0
+ 479 0187 7F        		.byte	127
+ 480 0188 44        		.byte	68
+ 481 0189 44        		.byte	68
+ 482 018a 44        		.byte	68
+ 483 018b 38        		.byte	56
+ 484 018c 00        		.byte	0
+ 485 018d 38        		.byte	56
+ 486 018e 44        		.byte	68
+ 487 018f 44        		.byte	68
+ 488 0190 44        		.byte	68
+ 489 0191 28        		.byte	40
+ 490 0192 00        		.byte	0
+ 491 0193 38        		.byte	56
+ 492 0194 44        		.byte	68
+ 493 0195 44        		.byte	68
+ 494 0196 44        		.byte	68
+ 495 0197 7F        		.byte	127
+ 496 0198 00        		.byte	0
+ 497 0199 38        		.byte	56
+ 498 019a 54        		.byte	84
+ 499 019b 54        		.byte	84
+ 500 019c 54        		.byte	84
+ 501 019d 08        		.byte	8
+ 502 019e 00        		.byte	0
+ 503 019f 08        		.byte	8
+ 504 01a0 7E        		.byte	126
+ 505 01a1 09        		.byte	9
+ 506 01a2 09        		.byte	9
+ 507 01a3 00        		.byte	0
+ 508 01a4 00        		.byte	0
+ 509 01a5 18        		.byte	24
+ 510 01a6 A4        		.byte	-92
+ 511 01a7 A4        		.byte	-92
+ 512 01a8 A4        		.byte	-92
+ 513 01a9 7C        		.byte	124
+GAS LISTING /tmp/ccmt9esf.s 			page 10
+
+
+ 514 01aa 00        		.byte	0
+ 515 01ab 7F        		.byte	127
+ 516 01ac 04        		.byte	4
+ 517 01ad 04        		.byte	4
+ 518 01ae 78        		.byte	120
+ 519 01af 00        		.byte	0
+ 520 01b0 00        		.byte	0
+ 521 01b1 00        		.byte	0
+ 522 01b2 00        		.byte	0
+ 523 01b3 7D        		.byte	125
+ 524 01b4 40        		.byte	64
+ 525 01b5 00        		.byte	0
+ 526 01b6 00        		.byte	0
+ 527 01b7 40        		.byte	64
+ 528 01b8 80        		.byte	-128
+ 529 01b9 84        		.byte	-124
+ 530 01ba 7D        		.byte	125
+ 531 01bb 00        		.byte	0
+ 532 01bc 00        		.byte	0
+ 533 01bd 7F        		.byte	127
+ 534 01be 10        		.byte	16
+ 535 01bf 28        		.byte	40
+ 536 01c0 44        		.byte	68
+ 537 01c1 00        		.byte	0
+ 538 01c2 00        		.byte	0
+ 539 01c3 00        		.byte	0
+ 540 01c4 00        		.byte	0
+ 541 01c5 7F        		.byte	127
+ 542 01c6 40        		.byte	64
+ 543 01c7 00        		.byte	0
+ 544 01c8 00        		.byte	0
+ 545 01c9 7C        		.byte	124
+ 546 01ca 04        		.byte	4
+ 547 01cb 18        		.byte	24
+ 548 01cc 04        		.byte	4
+ 549 01cd 78        		.byte	120
+ 550 01ce 00        		.byte	0
+ 551 01cf 7C        		.byte	124
+ 552 01d0 04        		.byte	4
+ 553 01d1 04        		.byte	4
+ 554 01d2 78        		.byte	120
+ 555 01d3 00        		.byte	0
+ 556 01d4 00        		.byte	0
+ 557 01d5 38        		.byte	56
+ 558 01d6 44        		.byte	68
+ 559 01d7 44        		.byte	68
+ 560 01d8 44        		.byte	68
+ 561 01d9 38        		.byte	56
+ 562 01da 00        		.byte	0
+ 563 01db FC        		.byte	-4
+ 564 01dc 44        		.byte	68
+ 565 01dd 44        		.byte	68
+ 566 01de 44        		.byte	68
+ 567 01df 38        		.byte	56
+ 568 01e0 00        		.byte	0
+ 569 01e1 38        		.byte	56
+ 570 01e2 44        		.byte	68
+GAS LISTING /tmp/ccmt9esf.s 			page 11
+
+
+ 571 01e3 44        		.byte	68
+ 572 01e4 44        		.byte	68
+ 573 01e5 FC        		.byte	-4
+ 574 01e6 00        		.byte	0
+ 575 01e7 44        		.byte	68
+ 576 01e8 78        		.byte	120
+ 577 01e9 44        		.byte	68
+ 578 01ea 04        		.byte	4
+ 579 01eb 08        		.byte	8
+ 580 01ec 00        		.byte	0
+ 581 01ed 08        		.byte	8
+ 582 01ee 54        		.byte	84
+ 583 01ef 54        		.byte	84
+ 584 01f0 54        		.byte	84
+ 585 01f1 20        		.byte	32
+ 586 01f2 00        		.byte	0
+ 587 01f3 04        		.byte	4
+ 588 01f4 3E        		.byte	62
+ 589 01f5 44        		.byte	68
+ 590 01f6 24        		.byte	36
+ 591 01f7 00        		.byte	0
+ 592 01f8 00        		.byte	0
+ 593 01f9 3C        		.byte	60
+ 594 01fa 40        		.byte	64
+ 595 01fb 20        		.byte	32
+ 596 01fc 7C        		.byte	124
+ 597 01fd 00        		.byte	0
+ 598 01fe 00        		.byte	0
+ 599 01ff 1C        		.byte	28
+ 600 0200 20        		.byte	32
+ 601 0201 40        		.byte	64
+ 602 0202 20        		.byte	32
+ 603 0203 1C        		.byte	28
+ 604 0204 00        		.byte	0
+ 605 0205 3C        		.byte	60
+ 606 0206 60        		.byte	96
+ 607 0207 30        		.byte	48
+ 608 0208 60        		.byte	96
+ 609 0209 3C        		.byte	60
+ 610 020a 00        		.byte	0
+ 611 020b 6C        		.byte	108
+ 612 020c 10        		.byte	16
+ 613 020d 10        		.byte	16
+ 614 020e 6C        		.byte	108
+ 615 020f 00        		.byte	0
+ 616 0210 00        		.byte	0
+ 617 0211 9C        		.byte	-100
+ 618 0212 A0        		.byte	-96
+ 619 0213 60        		.byte	96
+ 620 0214 3C        		.byte	60
+ 621 0215 00        		.byte	0
+ 622 0216 00        		.byte	0
+ 623 0217 64        		.byte	100
+ 624 0218 54        		.byte	84
+ 625 0219 54        		.byte	84
+ 626 021a 4C        		.byte	76
+ 627 021b 00        		.byte	0
+GAS LISTING /tmp/ccmt9esf.s 			page 12
+
+
+ 628 021c 00        		.byte	0
+ 629 021d 08        		.byte	8
+ 630 021e 3E        		.byte	62
+ 631 021f 41        		.byte	65
+ 632 0220 41        		.byte	65
+ 633 0221 00        		.byte	0
+ 634 0222 00        		.byte	0
+ 635 0223 00        		.byte	0
+ 636 0224 00        		.byte	0
+ 637 0225 77        		.byte	119
+ 638 0226 00        		.byte	0
+ 639 0227 00        		.byte	0
+ 640 0228 00        		.byte	0
+ 641 0229 00        		.byte	0
+ 642 022a 41        		.byte	65
+ 643 022b 41        		.byte	65
+ 644 022c 3E        		.byte	62
+ 645 022d 08        		.byte	8
+ 646 022e 00        		.byte	0
+ 647 022f 02        		.byte	2
+ 648 0230 01        		.byte	1
+ 649 0231 02        		.byte	2
+ 650 0232 01        		.byte	1
+ 651 0233 00        		.byte	0
+ 652               		.stabn	162,0,0,0
+ 653               	.global	g_program_counter
+ 654               		.data
+ 655               		.type	g_program_counter,@object
+ 656               		.size	g_program_counter,2
+ 657               	g_program_counter:
+ 658 0000 0000      		.word	0
+ 659               	.global	hexDigits
+ 660               		.type	hexDigits,@object
+ 661               		.size	hexDigits,16
+ 662               	hexDigits:
+ 663 0002 30        		.byte	48
+ 664 0003 31        		.byte	49
+ 665 0004 32        		.byte	50
+ 666 0005 33        		.byte	51
+ 667 0006 34        		.byte	52
+ 668 0007 35        		.byte	53
+ 669 0008 36        		.byte	54
+ 670 0009 37        		.byte	55
+ 671 000a 38        		.byte	56
+ 672 000b 39        		.byte	57
+ 673 000c 61        		.byte	97
+ 674 000d 62        		.byte	98
+ 675 000e 63        		.byte	99
+ 676 000f 64        		.byte	100
+ 677 0010 65        		.byte	101
+ 678 0011 66        		.byte	102
+ 679               		.text
+ 680               		.stabs	"emit_character:F(0,20)",36,0,95,emit_character
+ 681               		.stabs	"c:P(0,2)",64,0,94,25
+ 682               		.stabs	"col_num:P(3,2)",64,0,94,16
+ 683               		.stabs	"color_mask:P(3,2)",64,0,94,17
+ 684               	.global	emit_character
+GAS LISTING /tmp/ccmt9esf.s 			page 13
+
+
+ 685               		.type	emit_character,@function
+ 686               	emit_character:
+   1:tqw_text.c    **** /* -*- Mode: C; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+   2:tqw_text.c    **** 
+   3:tqw_text.c    **** #include <tqw.h>
+   4:tqw_text.c    **** #include <font6x8.h>
+   5:tqw_text.c    **** 
+   6:tqw_text.c    **** /* A screen is made up of one or more frames. */
+   7:tqw_text.c    **** #define SCREEN_WIDTH (128)
+   8:tqw_text.c    **** #define SCREEN_WIDTH_EXP (7)
+   9:tqw_text.c    **** #define FRAME_WIDTH (128)
+  10:tqw_text.c    **** #define FRAMES_IN_SCREEN (1)
+  11:tqw_text.c    **** 
+  12:tqw_text.c    **** volatile uint8_t g_rbuf[FRAME_WIDTH];
+  13:tqw_text.c    **** volatile uint8_t g_gbuf[FRAME_WIDTH];
+  14:tqw_text.c    **** volatile uint8_t g_bbuf[FRAME_WIDTH];
+  15:tqw_text.c    **** 
+  16:tqw_text.c    **** volatile uint8_t g_column;
+  17:tqw_text.c    **** volatile uint8_t g_frames;
+  18:tqw_text.c    **** volatile uint8_t g_buffer_offset;
+  19:tqw_text.c    **** volatile uint8_t g_buffer_remaining;
+  20:tqw_text.c    **** volatile uint16_t g_program_counter = 0;
+  21:tqw_text.c    **** 
+  22:tqw_text.c    **** uint8_t hexDigits[] = {
+  23:tqw_text.c    **** 	'0', '1', '2', '3',
+  24:tqw_text.c    **** 	'4', '5', '6', '7',
+  25:tqw_text.c    **** 	'8', '9', 'a', 'b',
+  26:tqw_text.c    **** 	'c', 'd', 'e', 'f'
+  27:tqw_text.c    **** };
+  28:tqw_text.c    **** 
+  29:tqw_text.c    **** static void adjustAndResetColumnTimer(void)
+  30:tqw_text.c    **** {
+  31:tqw_text.c    ****     uint16_t elapsed;
+  32:tqw_text.c    ****     elapsed = TQWGetAndResetRotationInterruptTime();
+  33:tqw_text.c    ****     
+  34:tqw_text.c    ****     /* Adjust the column interval only if this looks like a reasonable
+  35:tqw_text.c    ****      * cycle (roughly, mcu's CK/Hz / CK/64 / 30fps). Otherwise there
+  36:tqw_text.c    ****      * might be some ruined frames because of rotation sensor bouncing.
+  37:tqw_text.c    ****      */
+  38:tqw_text.c    ****     if (elapsed > (MCU_MEGAHERTZ * 1500) ) {
+  39:tqw_text.c    ****         uint8_t elapsed8;
+  40:tqw_text.c    ****         elapsed = elapsed >> SCREEN_WIDTH_EXP;
+  41:tqw_text.c    ****         elapsed8 = (uint8_t)elapsed;
+  42:tqw_text.c    ****         TQWSetColumnInterruptTimer(255 - elapsed8);
+  43:tqw_text.c    ****     }
+  44:tqw_text.c    **** }
+  45:tqw_text.c    **** 
+  46:tqw_text.c    **** static void handleRotationInterrupt(void)
+  47:tqw_text.c    **** {
+  48:tqw_text.c    ****     g_column = g_buffer_offset;
+  49:tqw_text.c    ****     g_buffer_remaining = FRAME_WIDTH;
+  50:tqw_text.c    ****     g_frames = 0;
+  51:tqw_text.c    ****     adjustAndResetColumnTimer();
+  52:tqw_text.c    **** }
+  53:tqw_text.c    **** 
+  54:tqw_text.c    **** static void setColumnLights(void)
+  55:tqw_text.c    **** {
+GAS LISTING /tmp/ccmt9esf.s 			page 14
+
+
+  56:tqw_text.c    ****     TQWLoadLatch(g_rbuf[g_column]);
+  57:tqw_text.c    ****     TQWStrobeRed();
+  58:tqw_text.c    ****     TQWLoadLatch(g_gbuf[g_column]);
+  59:tqw_text.c    ****     TQWStrobeGreen();
+  60:tqw_text.c    ****     TQWLoadLatch(g_bbuf[g_column]);
+  61:tqw_text.c    ****     TQWStrobeBlue();
+  62:tqw_text.c    **** }
+  63:tqw_text.c    **** 
+  64:tqw_text.c    **** /* Move to next column in frame, overflowing to next frame if necessary.
+  65:tqw_text.c    ****  * If we've finished the last frame, put the timer to sleep.
+  66:tqw_text.c    ****  */
+  67:tqw_text.c    **** static void advanceColumnMarker(void)
+  68:tqw_text.c    **** {
+  69:tqw_text.c    ****     if (++g_column >= FRAME_WIDTH) {
+  70:tqw_text.c    ****         g_column = 0;
+  71:tqw_text.c    ****     }
+  72:tqw_text.c    ****     if (0 == --g_buffer_remaining) {
+  73:tqw_text.c    ****         ++g_frames;
+  74:tqw_text.c    ****         g_buffer_remaining = FRAME_WIDTH;
+  75:tqw_text.c    ****     }
+  76:tqw_text.c    **** }
+  77:tqw_text.c    **** 
+  78:tqw_text.c    **** static void handleColumnInterrupt(void)
+  79:tqw_text.c    **** {
+  80:tqw_text.c    ****     /* The check for frame overflow is here instead of advanceColumnMarker
+  81:tqw_text.c    ****      * because we want to extinguish the lights _after_ the final column has
+  82:tqw_text.c    ****      * had a full phase. If we shut down the timer and the lights right after
+  83:tqw_text.c    ****      * setting the final column, then we'd never see the final column.
+  84:tqw_text.c    ****      */
+  85:tqw_text.c    ****     if (g_frames < FRAMES_IN_SCREEN) {
+  86:tqw_text.c    ****         setColumnLights();
+  87:tqw_text.c    ****         advanceColumnMarker();
+  88:tqw_text.c    ****     } else {
+  89:tqw_text.c    ****         TQWExtinguishLights();
+  90:tqw_text.c    ****         TQWSleepColumnInterruptTimer();
+  91:tqw_text.c    ****     }
+  92:tqw_text.c    **** }
+  93:tqw_text.c    **** 
+  94:tqw_text.c    **** void emit_character(char c, uint8_t col_num, uint8_t color_mask)
+  95:tqw_text.c    **** {
+ 687               		.stabn 68,0,95,.LM1-emit_character
+ 688               	.LM1:
+ 689               	/* prologue: frame size=6 */
+ 690 0000 8F92      		push r8
+ 691 0002 9F92      		push r9
+ 692 0004 AF92      		push r10
+ 693 0006 BF92      		push r11
+ 694 0008 CF92      		push r12
+ 695 000a DF92      		push r13
+ 696 000c EF92      		push r14
+ 697 000e FF92      		push r15
+ 698 0010 0F93      		push r16
+ 699 0012 1F93      		push r17
+ 700 0014 CF93      		push r28
+ 701 0016 DF93      		push r29
+ 702 0018 CDB7      		in r28,__SP_L__
+ 703 001a DEB7      		in r29,__SP_H__
+GAS LISTING /tmp/ccmt9esf.s 			page 15
+
+
+ 704 001c 2697      		sbiw r28,6
+ 705 001e 0FB6      		in __tmp_reg__,__SREG__
+ 706 0020 F894      		cli
+ 707 0022 DEBF      		out __SP_H__,r29
+ 708 0024 0FBE      		out __SREG__,__tmp_reg__
+ 709 0026 CDBF      		out __SP_L__,r28
+ 710               	/* prologue end (size=20) */
+ 711 0028 982F      		mov r25,r24
+ 712 002a 062F      		mov r16,r22
+ 713 002c 142F      		mov r17,r20
+  96:tqw_text.c    ****     uint8_t bitmap[FONT_WIDTH];
+  97:tqw_text.c    ****     uint8_t i;
+  98:tqw_text.c    **** 
+  99:tqw_text.c    ****     if (c >= 33) {
+ 714               		.stabn 68,0,99,.LM2-emit_character
+ 715               	.LM2:
+ 716               	.LBB2:
+ 717 002e 8132      		cpi r24,lo8(33)
+ 718 0030 D4F5      		brge .L17
+ 100:tqw_text.c    ****         PGM_P sfp = smallFont + (c - 33) * FONT_WIDTH;
+ 101:tqw_text.c    ****         memcpy_P(bitmap, sfp, FONT_WIDTH);
+ 102:tqw_text.c    ****     } else {
+ 103:tqw_text.c    ****         bitmap[0] = 
+ 719               		.stabn 68,0,103,.LM3-emit_character
+ 720               	.LM3:
+ 721 0032 1E82      		std Y+6,__zero_reg__
+ 722 0034 1D82      		std Y+5,__zero_reg__
+ 723 0036 1C82      		std Y+4,__zero_reg__
+ 724 0038 1B82      		std Y+3,__zero_reg__
+ 725 003a 1A82      		std Y+2,__zero_reg__
+ 726 003c 1982      		std Y+1,__zero_reg__
+ 727               	.L3:
+ 104:tqw_text.c    ****             bitmap[1] = 
+ 105:tqw_text.c    ****             bitmap[2] = 
+ 106:tqw_text.c    ****             bitmap[3] = 
+ 107:tqw_text.c    ****             bitmap[4] = 
+ 108:tqw_text.c    ****             bitmap[5] = 0;
+ 109:tqw_text.c    ****     }
+ 110:tqw_text.c    **** 
+ 111:tqw_text.c    ****     for (i = 0; i < FONT_WIDTH; i++) {
+ 728               		.stabn 68,0,111,.LM4-emit_character
+ 729               	.LM4:
+ 730 003e DD24      		clr r13
+ 731 0040 41E0      		ldi r20,lo8(1)
+ 732 0042 A42E      		mov r10,r20
+ 733 0044 A122      		and r10,r17
+ 734 0046 802E      		mov r8,r16
+ 735 0048 9924      		clr r9
+ 736 004a 32E0      		ldi r19,lo8(2)
+ 737 004c B32E      		mov r11,r19
+ 738 004e B122      		and r11,r17
+ 739 0050 24E0      		ldi r18,lo8(4)
+ 740 0052 C22E      		mov r12,r18
+ 741 0054 C122      		and r12,r17
+ 742 0056 B401      		movw r22,r8
+ 743 0058 6050      		subi r22,lo8(-(g_bbuf))
+ 744 005a 7040      		sbci r23,hi8(-(g_bbuf))
+GAS LISTING /tmp/ccmt9esf.s 			page 16
+
+
+ 745 005c 8B01      		movw r16,r22
+ 746 005e 9401      		movw r18,r8
+ 747 0060 2050      		subi r18,lo8(-(g_gbuf))
+ 748 0062 3040      		sbci r19,hi8(-(g_gbuf))
+ 749 0064 A901      		movw r20,r18
+ 750 0066 F401      		movw r30,r8
+ 751 0068 E050      		subi r30,lo8(-(g_rbuf))
+ 752 006a F040      		sbci r31,hi8(-(g_rbuf))
+ 753 006c 4F01      		movw r8,r30
+ 754 006e 7E01      		movw r14,r28
+ 755 0070 0894      		sec
+ 756 0072 E11C      		adc r14,__zero_reg__
+ 757 0074 F11C      		adc r15,__zero_reg__
+ 758               	.L14:
+ 112:tqw_text.c    ****         uint8_t column = bitmap[i];
+ 759               		.stabn 68,0,112,.LM5-emit_character
+ 760               	.LM5:
+ 761               	.LBB3:
+ 762 0076 D701      		movw r26,r14
+ 763 0078 8D91      		ld r24,X+
+ 764 007a 7D01      		movw r14,r26
+ 113:tqw_text.c    ****         if ((1 & color_mask)) {
+ 765               		.stabn 68,0,113,.LM6-emit_character
+ 766               	.LM6:
+ 767 007c AA20      		tst r10
+ 768 007e 81F0      		breq .L8
+ 114:tqw_text.c    ****             g_rbuf[col_num + i] = column;
+ 769               		.stabn 68,0,114,.LM7-emit_character
+ 770               	.LM7:
+ 771 0080 8083      		st Z,r24
+ 772               	.L9:
+ 115:tqw_text.c    ****         } else {
+ 116:tqw_text.c    ****             g_rbuf[col_num + i] = 0;
+ 117:tqw_text.c    ****         }
+ 118:tqw_text.c    ****         if ((2 & color_mask)) {
+ 773               		.stabn 68,0,118,.LM8-emit_character
+ 774               	.LM8:
+ 775 0082 BB20      		tst r11
+ 776 0084 51F0      		breq .L10
+ 119:tqw_text.c    ****             g_gbuf[col_num + i] = column;
+ 777               		.stabn 68,0,119,.LM9-emit_character
+ 778               	.LM9:
+ 779 0086 D901      		movw r26,r18
+ 780 0088 8C93      		st X,r24
+ 781               	.L11:
+ 120:tqw_text.c    ****         } else {
+ 121:tqw_text.c    ****             g_gbuf[col_num + i] = 0;
+ 122:tqw_text.c    ****         }
+ 123:tqw_text.c    ****         if ((4 & color_mask)) {
+ 782               		.stabn 68,0,123,.LM10-emit_character
+ 783               	.LM10:
+ 784 008a CC20      		tst r12
+ 785 008c 19F0      		breq .L12
+ 124:tqw_text.c    ****             g_bbuf[col_num + i] = column;
+ 786               		.stabn 68,0,124,.LM11-emit_character
+ 787               	.LM11:
+ 788 008e DB01      		movw r26,r22
+GAS LISTING /tmp/ccmt9esf.s 			page 17
+
+
+ 789 0090 8C93      		st X,r24
+ 790 0092 16C0      		rjmp .L6
+ 791               	.L12:
+ 125:tqw_text.c    ****         } else {
+ 126:tqw_text.c    ****             g_bbuf[col_num + i] = 0;
+ 792               		.stabn 68,0,126,.LM12-emit_character
+ 793               	.LM12:
+ 794 0094 D801      		movw r26,r16
+ 795 0096 CC92      		st X,r12
+ 796 0098 13C0      		rjmp .L6
+ 797               	.L10:
+ 798               		.stabn 68,0,121,.LM13-emit_character
+ 799               	.LM13:
+ 800 009a DA01      		movw r26,r20
+ 801 009c BC92      		st X,r11
+ 802 009e F5CF      		rjmp .L11
+ 803               	.L8:
+ 804               		.stabn 68,0,116,.LM14-emit_character
+ 805               	.LM14:
+ 806 00a0 D401      		movw r26,r8
+ 807 00a2 AC92      		st X,r10
+ 808 00a4 EECF      		rjmp .L9
+ 809               		.stabn 68,0,100,.LM15-emit_character
+ 810               	.LM15:
+ 811               	.L17:
+ 812               	.LBE3:
+ 813               	.LBB4:
+ 814 00a6 86E0      		ldi r24,lo8(6)
+ 815 00a8 9802      		muls r25,r24
+ 816 00aa 9001      		movw r18,r0
+ 817 00ac 1124      		clr r1
+ 818 00ae 2050      		subi r18,lo8(-(smallFont-198))
+ 819 00b0 3040      		sbci r19,hi8(-(smallFont-198))
+ 820               		.stabn 68,0,101,.LM16-emit_character
+ 821               	.LM16:
+ 822 00b2 46E0      		ldi r20,lo8(6)
+ 823 00b4 50E0      		ldi r21,hi8(6)
+ 824 00b6 B901      		movw r22,r18
+ 825 00b8 CE01      		movw r24,r28
+ 826 00ba 0196      		adiw r24,1
+ 827 00bc 00D0      		rcall memcpy_P
+ 828               	.LBE4:
+ 829 00be BFCF      		rjmp .L3
+ 830               		.stabn 68,0,111,.LM17-emit_character
+ 831               	.LM17:
+ 832               	.L6:
+ 833 00c0 0F5F      		subi r16,lo8(-(1))
+ 834 00c2 1F4F      		sbci r17,hi8(-(1))
+ 835 00c4 6F5F      		subi r22,lo8(-(1))
+ 836 00c6 7F4F      		sbci r23,hi8(-(1))
+ 837 00c8 4F5F      		subi r20,lo8(-(1))
+ 838 00ca 5F4F      		sbci r21,hi8(-(1))
+ 839 00cc 2F5F      		subi r18,lo8(-(1))
+ 840 00ce 3F4F      		sbci r19,hi8(-(1))
+ 841 00d0 0894      		sec
+ 842 00d2 811C      		adc r8,__zero_reg__
+ 843 00d4 911C      		adc r9,__zero_reg__
+GAS LISTING /tmp/ccmt9esf.s 			page 18
+
+
+ 844 00d6 3196      		adiw r30,1
+ 845 00d8 D394      		inc r13
+ 846 00da 85E0      		ldi r24,lo8(5)
+ 847 00dc 8D15      		cp r24,r13
+ 848 00de 58F6      		brsh .L14
+ 127:tqw_text.c    ****         }
+ 128:tqw_text.c    ****     }
+ 129:tqw_text.c    **** }
+ 849               		.stabn 68,0,129,.LM18-emit_character
+ 850               	.LM18:
+ 851               	.LBE2:
+ 852               	/* epilogue: frame size=6 */
+ 853 00e0 2696      		adiw r28,6
+ 854 00e2 0FB6      		in __tmp_reg__,__SREG__
+ 855 00e4 F894      		cli
+ 856 00e6 DEBF      		out __SP_H__,r29
+ 857 00e8 0FBE      		out __SREG__,__tmp_reg__
+ 858 00ea CDBF      		out __SP_L__,r28
+ 859 00ec DF91      		pop r29
+ 860 00ee CF91      		pop r28
+ 861 00f0 1F91      		pop r17
+ 862 00f2 0F91      		pop r16
+ 863 00f4 FF90      		pop r15
+ 864 00f6 EF90      		pop r14
+ 865 00f8 DF90      		pop r13
+ 866 00fa CF90      		pop r12
+ 867 00fc BF90      		pop r11
+ 868 00fe AF90      		pop r10
+ 869 0100 9F90      		pop r9
+ 870 0102 8F90      		pop r8
+ 871 0104 0895      		ret
+ 872               	/* epilogue end (size=19) */
+ 873               	/* function emit_character size 131 (92) */
+ 874               	.Lfe1:
+ 875               		.size	emit_character,.Lfe1-emit_character
+ 876               		.stabs	"bitmap:(1,1)=ar(1,2)=r(1,2);0000000000000;0000000177777;;0;5;(3,2)",128,0,96,1
+ 877               		.stabs	"i:r(3,2)",64,0,97,13
+ 878               		.stabn	192,0,0,.LBB2-emit_character
+ 879               		.stabs	"column:r(3,2)",64,0,112,24
+ 880               		.stabn	192,0,0,.LBB3-emit_character
+ 881               		.stabn	224,0,0,.LBE3-emit_character
+ 882               		.stabn	224,0,0,.LBE2-emit_character
+ 883               	.Lscope0:
+ 884               		.stabs	"",36,0,0,.Lscope0-emit_character
+ 885               		.data
+ 886               	.LC0:
+ 887 0012 5468 6520 		.string	"The Quoting, Whirled "
+ 887      5175 6F74 
+ 887      696E 672C 
+ 887      2057 6869 
+ 887      726C 6564 
+ 888               		.text
+ 889               		.stabs	"main:F(0,1)",36,0,190,main
+ 890               	.global	main
+ 891               		.type	main,@function
+ 892               	main:
+ 130:tqw_text.c    **** 
+GAS LISTING /tmp/ccmt9esf.s 			page 19
+
+
+ 131:tqw_text.c    **** static void emit_string(uint8_t *s, uint8_t offset)
+ 132:tqw_text.c    **** {
+ 133:tqw_text.c    ****     uint8_t color_mask = 1;
+ 134:tqw_text.c    ****     uint8_t i = 0;
+ 135:tqw_text.c    ****     while ('\0' != *s) {
+ 136:tqw_text.c    ****         emit_character(*s, i + offset, color_mask);
+ 137:tqw_text.c    ****         i += FONT_WIDTH;
+ 138:tqw_text.c    ****         color_mask++;
+ 139:tqw_text.c    ****         if (color_mask > 7) {
+ 140:tqw_text.c    ****             color_mask = 1;
+ 141:tqw_text.c    ****         }
+ 142:tqw_text.c    ****     	s++;
+ 143:tqw_text.c    ****     }
+ 144:tqw_text.c    **** }
+ 145:tqw_text.c    **** 
+ 146:tqw_text.c    **** static void dumpHex(uint8_t *s, uint8_t n)
+ 147:tqw_text.c    **** {
+ 148:tqw_text.c    ****     uint8_t color_mask = 1;
+ 149:tqw_text.c    ****     uint8_t i = 0;
+ 150:tqw_text.c    ****     while (n-- > 0) {
+ 151:tqw_text.c    ****         uint8_t temp_char;
+ 152:tqw_text.c    ****         uint8_t binary_digit = *s;
+ 153:tqw_text.c    ****         memcpy(&temp_char, &hexDigits[binary_digit >> 4], 1);
+ 154:tqw_text.c    ****         emit_character(temp_char, i, color_mask);
+ 155:tqw_text.c    ****         i += FONT_WIDTH;
+ 156:tqw_text.c    ****         memcpy(&temp_char, &hexDigits[binary_digit & 0x0f], 1);
+ 157:tqw_text.c    ****         emit_character(temp_char, i, color_mask);
+ 158:tqw_text.c    ****         i += FONT_WIDTH;
+ 159:tqw_text.c    ****         color_mask++;
+ 160:tqw_text.c    ****         if (color_mask > 7) {
+ 161:tqw_text.c    ****             color_mask = 1;
+ 162:tqw_text.c    ****         }
+ 163:tqw_text.c    ****     	s++;
+ 164:tqw_text.c    ****     }
+ 165:tqw_text.c    **** }
+ 166:tqw_text.c    **** 
+ 167:tqw_text.c    **** static void shiftVirtualBufferStart(uint8_t forward, uint8_t rate)
+ 168:tqw_text.c    **** {
+ 169:tqw_text.c    ****     if (forward) {
+ 170:tqw_text.c    **** 		g_buffer_offset++;
+ 171:tqw_text.c    **** 		if (g_buffer_offset > FRAME_WIDTH) {
+ 172:tqw_text.c    **** 		    g_buffer_offset = 0;
+ 173:tqw_text.c    **** 		}
+ 174:tqw_text.c    ****     } else {
+ 175:tqw_text.c    **** 		if (0 == g_buffer_offset) {
+ 176:tqw_text.c    **** 		    g_buffer_offset = FRAME_WIDTH - 1;
+ 177:tqw_text.c    **** 		} else {
+ 178:tqw_text.c    ****             g_buffer_offset--;
+ 179:tqw_text.c    ****         }
+ 180:tqw_text.c    ****     }
+ 181:tqw_text.c    **** }
+ 182:tqw_text.c    **** 
+ 183:tqw_text.c    **** static void fillFrameBuffer(void)
+ 184:tqw_text.c    **** {
+ 185:tqw_text.c    ****     /*           123456789012345678901 */
+ 186:tqw_text.c    ****     emit_string("The Quoting, Whirled ", 0);
+ 187:tqw_text.c    **** }
+GAS LISTING /tmp/ccmt9esf.s 			page 20
+
+
+ 188:tqw_text.c    **** 
+ 189:tqw_text.c    **** int main(void)
+ 190:tqw_text.c    **** {
+ 893               		.stabn 68,0,190,.LM19-main
+ 894               	.LM19:
+ 895               	/* prologue: frame size=0 */
+ 896 0106 C0E0      		ldi r28,lo8(__stack - 0)
+ 897 0108 D0E0      		ldi r29,hi8(__stack - 0)
+ 898 010a DEBF      		out __SP_H__,r29
+ 899 010c CDBF      		out __SP_L__,r28
+ 900               	/* prologue end (size=4) */
+ 191:tqw_text.c    ****     TQWInit();
+ 901               		.stabn 68,0,191,.LM20-main
+ 902               	.LM20:
+ 903 010e 00D0      		rcall TQWInit
+ 192:tqw_text.c    ****     TQWSetRotationInterrupt(handleRotationInterrupt);
+ 904               		.stabn 68,0,192,.LM21-main
+ 905               	.LM21:
+ 906 0110 80E0      		ldi r24,lo8(pm(handleRotationInterrupt))
+ 907 0112 90E0      		ldi r25,hi8(pm(handleRotationInterrupt))
+ 908 0114 00D0      		rcall TQWSetRotationInterrupt
+ 193:tqw_text.c    ****     TQWSetColumnInterrupt(handleColumnInterrupt);
+ 909               		.stabn 68,0,193,.LM22-main
+ 910               	.LM22:
+ 911 0116 80E0      		ldi r24,lo8(pm(handleColumnInterrupt))
+ 912 0118 90E0      		ldi r25,hi8(pm(handleColumnInterrupt))
+ 913 011a 00D0      		rcall TQWSetColumnInterrupt
+ 914               		.stabn 68,0,132,.LM23-main
+ 915               	.LM23:
+ 916               	.LBB5:
+ 917               	.LBB6:
+ 918 011c C0E0      		ldi r28,lo8(.LC0)
+ 919 011e D0E0      		ldi r29,hi8(.LC0)
+ 920               		.stabn 68,0,133,.LM24-main
+ 921               	.LM24:
+ 922               	.LBB7:
+ 923 0120 11E0      		ldi r17,lo8(1)
+ 924               		.stabn 68,0,134,.LM25-main
+ 925               	.LM25:
+ 926 0122 00E0      		ldi r16,lo8(0)
+ 927               		.stabn 68,0,135,.LM26-main
+ 928               	.LM26:
+ 929 0124 2091 0000 		lds r18,.LC0
+ 930 0128 2223      		tst r18
+ 931 012a 69F0      		breq .L26
+ 932               	.L23:
+ 933               		.stabn 68,0,136,.LM27-main
+ 934               	.LM27:
+ 935 012c 412F      		mov r20,r17
+ 936 012e 602F      		mov r22,r16
+ 937 0130 8881      		ld r24,Y
+ 938 0132 66DF      		rcall emit_character
+ 939               		.stabn 68,0,137,.LM28-main
+ 940               	.LM28:
+ 941 0134 0A5F      		subi r16,lo8(-(6))
+ 942               		.stabn 68,0,138,.LM29-main
+ 943               	.LM29:
+GAS LISTING /tmp/ccmt9esf.s 			page 21
+
+
+ 944 0136 1F5F      		subi r17,lo8(-(1))
+ 945               		.stabn 68,0,139,.LM30-main
+ 946               	.LM30:
+ 947 0138 1830      		cpi r17,lo8(8)
+ 948 013a 08F0      		brlo .L22
+ 949               		.stabn 68,0,140,.LM31-main
+ 950               	.LM31:
+ 951 013c 11E0      		ldi r17,lo8(1)
+ 952               	.L22:
+ 953               		.stabn 68,0,142,.LM32-main
+ 954               	.LM32:
+ 955 013e 2196      		adiw r28,1
+ 956 0140 2881      		ld r18,Y
+ 957 0142 2223      		tst r18
+ 958 0144 99F7      		brne .L23
+ 959               	.L26:
+ 960               		.stabn 68,0,170,.LM33-main
+ 961               	.LM33:
+ 962               	.LBE7:
+ 963               	.LBE6:
+ 964               	.LBE5:
+ 965               	.LBB8:
+ 966 0146 1091 0000 		lds r17,g_buffer_offset
+ 967 014a 1F5F      		subi r17,lo8(-(1))
+ 968 014c 1093 0000 		sts g_buffer_offset,r17
+ 969               		.stabn 68,0,171,.LM34-main
+ 970               	.LM34:
+ 971 0150 0091 0000 		lds r16,g_buffer_offset
+ 972 0154 0138      		cpi r16,lo8(-127)
+ 973 0156 10F0      		brlo .L34
+ 974               		.stabn 68,0,172,.LM35-main
+ 975               	.LM35:
+ 976 0158 1092 0000 		sts g_buffer_offset,__zero_reg__
+ 977               		.stabn 68,0,178,.LM36-main
+ 978               	.LM36:
+ 979               	.L34:
+ 194:tqw_text.c    **** 
+ 195:tqw_text.c    ****     fillFrameBuffer();
+ 196:tqw_text.c    ****     
+ 197:tqw_text.c    ****     do {
+ 198:tqw_text.c    ****         shiftVirtualBufferStart(TRUE, 128);
+ 199:tqw_text.c    ****         TQWDelay(32);
+ 980               		.stabn 68,0,199,.LM37-main
+ 981               	.LM37:
+ 982               	.LBE8:
+ 983 015c 80E2      		ldi r24,lo8(32)
+ 984 015e 00D0      		rcall TQWDelay
+ 200:tqw_text.c    ****     } while (TRUE);
+ 985               		.stabn 68,0,200,.LM38-main
+ 986               	.LM38:
+ 987 0160 F2CF      		rjmp .L26
+ 201:tqw_text.c    **** }
+ 988               		.stabn 68,0,201,.LM39-main
+ 989               	.LM39:
+ 990               	/* epilogue: frame size=0 */
+ 991               	__stop_progIi__:
+ 992 0162 FFCF      		rjmp __stop_progIi__
+GAS LISTING /tmp/ccmt9esf.s 			page 22
+
+
+ 993               	/* epilogue end (size=1) */
+ 994               	/* function main size 47 (42) */
+ 995               	.Lfe2:
+ 996               		.size	main,.Lfe2-main
+ 997               		.stabs	"s:r(1,3)=*(3,2)",64,0,132,28
+ 998               		.stabn	192,0,0,.LBB6-main
+ 999               		.stabs	"color_mask:r(3,2)",64,0,133,17
+ 1000               		.stabs	"i:r(3,2)",64,0,134,16
+ 1001               		.stabn	192,0,0,.LBB7-main
+ 1002               		.stabn	224,0,0,.LBE7-main
+ 1003               		.stabn	224,0,0,.LBE6-main
+ 1004               	.Lscope1:
+ 1005               		.stabs	"",36,0,0,.Lscope1-main
+ 1006               		.comm g_rbuf,128,1
+ 1007               		.comm g_gbuf,128,1
+ 1008               		.comm g_bbuf,128,1
+ 1009               		.comm g_column,1,1
+ 1010               		.comm g_frames,1,1
+ 1011               		.comm g_buffer_offset,1,1
+ 1012               		.comm g_buffer_remaining,1,1
+ 1013               		.stabs	"handleRotationInterrupt:f(0,20)",36,0,47,handleRotationInterrupt
+ 1014               		.type	handleRotationInterrupt,@function
+ 1015               	handleRotationInterrupt:
+ 1016               		.stabn 68,0,47,.LM40-handleRotationInterrupt
+ 1017               	.LM40:
+ 1018               	/* prologue: frame size=0 */
+ 1019               	/* prologue end (size=0) */
+ 1020               		.stabn 68,0,48,.LM41-handleRotationInterrupt
+ 1021               	.LM41:
+ 1022 0164 2091 0000 		lds r18,g_buffer_offset
+ 1023 0168 2093 0000 		sts g_column,r18
+ 1024               		.stabn 68,0,49,.LM42-handleRotationInterrupt
+ 1025               	.LM42:
+ 1026 016c 20E8      		ldi r18,lo8(-128)
+ 1027 016e 2093 0000 		sts g_buffer_remaining,r18
+ 1028               		.stabn 68,0,50,.LM43-handleRotationInterrupt
+ 1029               	.LM43:
+ 1030 0172 1092 0000 		sts g_frames,__zero_reg__
+ 1031               		.stabn 68,0,32,.LM44-handleRotationInterrupt
+ 1032               	.LM44:
+ 1033               	.LBB9:
+ 1034               	.LBB10:
+ 1035 0176 00D0      		rcall TQWGetAndResetRotationInterruptTime
+ 1036               		.stabn 68,0,38,.LM45-handleRotationInterrupt
+ 1037               	.LM45:
+ 1038 0178 2EE2      		ldi r18,hi8(12001)
+ 1039 017a 813E      		cpi r24,lo8(12001)
+ 1040 017c 9207      		cpc r25,r18
+ 1041 017e 38F0      		brlo .L40
+ 1042               		.stabn 68,0,40,.LM46-handleRotationInterrupt
+ 1043               	.LM46:
+ 1044               	.LBB11:
+ 1045 0180 880F      		lsl r24
+ 1046 0182 892F      		mov r24,r25
+ 1047 0184 881F      		rol r24
+ 1048 0186 990B      		sbc r25,r25
+ 1049 0188 9195      		neg r25
+GAS LISTING /tmp/ccmt9esf.s 			page 23
+
+
+ 1050               		.stabn 68,0,42,.LM47-handleRotationInterrupt
+ 1051               	.LM47:
+ 1052 018a 8095      		com r24
+ 1053 018c 00D0      		rcall TQWSetColumnInterruptTimer
+ 1054               		.stabn 68,0,52,.LM48-handleRotationInterrupt
+ 1055               	.LM48:
+ 1056               	.L40:
+ 1057               	.LBE11:
+ 1058               	.LBE10:
+ 1059               	.LBE9:
+ 1060               	/* epilogue: frame size=0 */
+ 1061 018e 0895      		ret
+ 1062               	/* epilogue end (size=1) */
+ 1063               	/* function handleRotationInterrupt size 22 (21) */
+ 1064               	.Lfe3:
+ 1065               		.size	handleRotationInterrupt,.Lfe3-handleRotationInterrupt
+ 1066               		.stabs	"elapsed:r(3,4)",64,0,31,24
+ 1067               		.stabn	192,0,0,.LBB10-handleRotationInterrupt
+ 1068               		.stabs	"elapsed8:r(3,2)",64,0,39,24
+ 1069               		.stabn	192,0,0,.LBB11-handleRotationInterrupt
+ 1070               		.stabn	224,0,0,.LBE11-handleRotationInterrupt
+ 1071               		.stabn	224,0,0,.LBE10-handleRotationInterrupt
+ 1072               	.Lscope2:
+ 1073               		.stabs	"",36,0,0,.Lscope2-handleRotationInterrupt
+ 1074               		.stabs	"handleColumnInterrupt:f(0,20)",36,0,79,handleColumnInterrupt
+ 1075               		.type	handleColumnInterrupt,@function
+ 1076               	handleColumnInterrupt:
+ 1077               		.stabn 68,0,79,.LM49-handleColumnInterrupt
+ 1078               	.LM49:
+ 1079               	/* prologue: frame size=0 */
+ 1080 0190 CF93      		push r28
+ 1081               	/* prologue end (size=1) */
+ 1082               		.stabn 68,0,85,.LM50-handleColumnInterrupt
+ 1083               	.LM50:
+ 1084 0192 C091 0000 		lds r28,g_frames
+ 1085 0196 CC23      		tst r28
+ 1086 0198 C1F5      		brne .L48
+ 1087               		.stabn 68,0,56,.LM51-handleColumnInterrupt
+ 1088               	.LM51:
+ 1089               	.LBB12:
+ 1090 019a 5091 0000 		lds r21,g_column
+ 1091 019e A0E0      		ldi r26,lo8(g_rbuf)
+ 1092 01a0 B0E0      		ldi r27,hi8(g_rbuf)
+ 1093 01a2 A50F      		add r26,r21
+ 1094 01a4 B11D      		adc r27,__zero_reg__
+ 1095 01a6 8C91      		ld r24,X
+ 1096 01a8 00D0      		rcall TQWLoadLatch
+ 1097               		.stabn 68,0,57,.LM52-handleColumnInterrupt
+ 1098               	.LM52:
+ 1099 01aa 00D0      		rcall TQWStrobeRed
+ 1100               		.stabn 68,0,58,.LM53-handleColumnInterrupt
+ 1101               	.LM53:
+ 1102 01ac 4091 0000 		lds r20,g_column
+ 1103 01b0 A0E0      		ldi r26,lo8(g_gbuf)
+ 1104 01b2 B0E0      		ldi r27,hi8(g_gbuf)
+ 1105 01b4 A40F      		add r26,r20
+ 1106 01b6 B11D      		adc r27,__zero_reg__
+GAS LISTING /tmp/ccmt9esf.s 			page 24
+
+
+ 1107 01b8 8C91      		ld r24,X
+ 1108 01ba 00D0      		rcall TQWLoadLatch
+ 1109               		.stabn 68,0,59,.LM54-handleColumnInterrupt
+ 1110               	.LM54:
+ 1111 01bc 00D0      		rcall TQWStrobeGreen
+ 1112               		.stabn 68,0,60,.LM55-handleColumnInterrupt
+ 1113               	.LM55:
+ 1114 01be 3091 0000 		lds r19,g_column
+ 1115 01c2 A0E0      		ldi r26,lo8(g_bbuf)
+ 1116 01c4 B0E0      		ldi r27,hi8(g_bbuf)
+ 1117 01c6 A30F      		add r26,r19
+ 1118 01c8 B11D      		adc r27,__zero_reg__
+ 1119 01ca 8C91      		ld r24,X
+ 1120 01cc 00D0      		rcall TQWLoadLatch
+ 1121               		.stabn 68,0,61,.LM56-handleColumnInterrupt
+ 1122               	.LM56:
+ 1123 01ce 00D0      		rcall TQWStrobeBlue
+ 1124               		.stabn 68,0,69,.LM57-handleColumnInterrupt
+ 1125               	.LM57:
+ 1126               	.LBE12:
+ 1127               	.LBB13:
+ 1128 01d0 2091 0000 		lds r18,g_column
+ 1129 01d4 2F5F      		subi r18,lo8(-(1))
+ 1130 01d6 2093 0000 		sts g_column,r18
+ 1131 01da 2091 0000 		lds r18,g_column
+ 1132 01de 2038      		cpi r18,lo8(-128)
+ 1133 01e0 10F0      		brlo .L50
+ 1134               		.stabn 68,0,70,.LM58-handleColumnInterrupt
+ 1135               	.LM58:
+ 1136 01e2 C093 0000 		sts g_column,r28
+ 1137               	.L50:
+ 1138               		.stabn 68,0,72,.LM59-handleColumnInterrupt
+ 1139               	.LM59:
+ 1140 01e6 7091 0000 		lds r23,g_buffer_remaining
+ 1141 01ea 7150      		subi r23,lo8(-(-1))
+ 1142 01ec 7093 0000 		sts g_buffer_remaining,r23
+ 1143 01f0 6091 0000 		lds r22,g_buffer_remaining
+ 1144 01f4 6623      		tst r22
+ 1145 01f6 59F4      		brne .L47
+ 1146               		.stabn 68,0,73,.LM60-handleColumnInterrupt
+ 1147               	.LM60:
+ 1148 01f8 B091 0000 		lds r27,g_frames
+ 1149 01fc BF5F      		subi r27,lo8(-(1))
+ 1150 01fe B093 0000 		sts g_frames,r27
+ 1151               		.stabn 68,0,74,.LM61-handleColumnInterrupt
+ 1152               	.LM61:
+ 1153 0202 90E8      		ldi r25,lo8(-128)
+ 1154 0204 9093 0000 		sts g_buffer_remaining,r25
+ 1155               	.LBE13:
+ 1156 0208 02C0      		rjmp .L47
+ 1157               	.L48:
+ 1158               		.stabn 68,0,89,.LM62-handleColumnInterrupt
+ 1159               	.LM62:
+ 1160 020a 00D0      		rcall TQWExtinguishLights
+ 1161               		.stabn 68,0,90,.LM63-handleColumnInterrupt
+ 1162               	.LM63:
+ 1163 020c 00D0      		rcall TQWSleepColumnInterruptTimer
+GAS LISTING /tmp/ccmt9esf.s 			page 25
+
+
+ 1164               		.stabn 68,0,92,.LM64-handleColumnInterrupt
+ 1165               	.LM64:
+ 1166               	.L47:
+ 1167               	/* epilogue: frame size=0 */
+ 1168 020e CF91      		pop r28
+ 1169 0210 0895      		ret
+ 1170               	/* epilogue end (size=2) */
+ 1171               	/* function handleColumnInterrupt size 65 (62) */
+ 1172               	.Lfe4:
+ 1173               		.size	handleColumnInterrupt,.Lfe4-handleColumnInterrupt
+ 1174               	.Lscope3:
+ 1175               		.stabs	"",36,0,0,.Lscope3-handleColumnInterrupt
+ 1176               		.stabs	"smallFont:G(1,4)=ar(1,2);0;563;(11,3)",32,0,4,0
+ 1177               		.stabs	"g_rbuf:G(1,5)=ar(1,2);0;127;(1,6)=B(3,2)",32,0,12,0
+ 1178               		.stabs	"g_gbuf:G(1,5)",32,0,13,0
+ 1179               		.stabs	"g_bbuf:G(1,5)",32,0,14,0
+ 1180               		.stabs	"g_column:G(1,6)",32,0,16,0
+ 1181               		.stabs	"g_frames:G(1,6)",32,0,17,0
+ 1182               		.stabs	"g_buffer_offset:G(1,6)",32,0,18,0
+ 1183               		.stabs	"g_buffer_remaining:G(1,6)",32,0,19,0
+ 1184               		.stabs	"g_program_counter:G(1,7)=B(3,4)",32,0,20,0
+ 1185               		.stabs	"hexDigits:G(1,8)=ar(1,2);0;15;(3,2)",32,0,22,0
+ 1186               		.text
+ 1187               		.stabs "",100,0,0,Letext
+ 1188               	Letext:
+ 1189               	/* File tqw_text.c: code  265 = 0x0109 ( 217), prologues  25, epilogues  23 */
+GAS LISTING /tmp/ccmt9esf.s 			page 26
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 tqw_text.c
+                            *ABS*:0000003f __SREG__
+                            *ABS*:0000003e __SP_H__
+                            *ABS*:0000003d __SP_L__
+                            *ABS*:00000000 __tmp_reg__
+                            *ABS*:00000001 __zero_reg__
+                            *ABS*:00000002 _PC_
+     /tmp/ccmt9esf.s:87     .progmem.data:00000000 smallFont
+     /tmp/ccmt9esf.s:657    .data:00000000 g_program_counter
+     /tmp/ccmt9esf.s:662    .data:00000002 hexDigits
+     /tmp/ccmt9esf.s:686    .text:00000000 emit_character
+                            *COM*:00000080 g_bbuf
+                            *COM*:00000080 g_gbuf
+                            *COM*:00000080 g_rbuf
+     /tmp/ccmt9esf.s:892    .text:00000106 main
+     /tmp/ccmt9esf.s:1015   .text:00000164 handleRotationInterrupt
+     /tmp/ccmt9esf.s:1076   .text:00000190 handleColumnInterrupt
+                            *COM*:00000001 g_buffer_offset
+     /tmp/ccmt9esf.s:991    .text:00000162 __stop_progIi__
+                            *COM*:00000001 g_column
+                            *COM*:00000001 g_frames
+                            *COM*:00000001 g_buffer_remaining
+     /tmp/ccmt9esf.s:1188   .text:00000212 Letext
+                            *ABS*:00000000 *ABS*
+
+UNDEFINED SYMBOLS
+memcpy_P
+__stack
+TQWInit
+TQWSetRotationInterrupt
+TQWSetColumnInterrupt
+TQWDelay
+TQWGetAndResetRotationInterruptTime
+TQWSetColumnInterruptTimer
+TQWLoadLatch
+TQWStrobeRed
+TQWStrobeGreen
+TQWStrobeBlue
+TQWExtinguishLights
+TQWSleepColumnInterruptTimer

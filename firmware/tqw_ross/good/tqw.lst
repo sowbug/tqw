@@ -1,0 +1,1669 @@
+GAS LISTING /tmp/cc21ii16.s 			page 1
+
+
+   1               		.file	"tqw.c"
+   2               		.arch atmega8
+   3               	__SREG__ = 0x3f
+   4               	__SP_H__ = 0x3e
+   5               	__SP_L__ = 0x3d
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               	_PC_ = 2
+   9               		.stabs	"/home/ross/src/avr/tqw_ross/good/",100,0,0,.Ltext0
+  10               		.stabs	"tqw.c",100,0,0,.Ltext0
+  11               		.text
+  12               	.Ltext0:
+  13               		.stabs	"gcc2_compiled.",60,0,0,0
+  14               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  15               		.stabs	"char:t(0,2)=r(0,2);0;127;",128,0,0,0
+  16               		.stabs	"long int:t(0,3)=@s32;r(0,3);0020000000000;0017777777777;",128,0,0,0
+  17               		.stabs	"unsigned int:t(0,4)=r(0,4);0000000000000;0000000177777;",128,0,0,0
+  18               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0000000000000;0037777777777;",128,0,0,0
+  19               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  20               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0000000000000;01777777777777777777777;",128,0,0,
+  21               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  22               		.stabs	"short unsigned int:t(0,9)=r(0,9);0000000000000;0000000177777;",128,0,0,0
+  23               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  24               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  25               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"complex int:t(0,15)=s4real:(0,1),0,16;imag:(0,1),16,16;;",128,0,0,0
+  29               		.stabs	"complex float:t(0,16)=r(0,16);8;0;",128,0,0,0
+  30               		.stabs	"complex double:t(0,17)=r(0,17);8;0;",128,0,0,0
+  31               		.stabs	"complex long double:t(0,18)=r(0,18);8;0;",128,0,0,0
+  32               		.stabs	"__builtin_va_list:t(0,19)=*(0,20)=(0,20)",128,0,0,0
+  33               		.stabs	"_Bool:t(0,21)=@s8;-16;",128,0,0,0
+  34               		.stabs	"tqw.c",130,0,0,0
+  35               		.stabs	"tqw.h",130,0,0,0
+  36               		.stabs	"/usr/local/avr/include/inttypes.h",130,0,0,0
+  37               		.stabs	"int8_t:t(3,1)=(0,10)",128,0,24,0
+  38               		.stabs	"uint8_t:t(3,2)=(0,11)",128,0,25,0
+  39               		.stabs	"int16_t:t(3,3)=(0,1)",128,0,27,0
+  40               		.stabs	"uint16_t:t(3,4)=(0,4)",128,0,28,0
+  41               		.stabs	"int32_t:t(3,5)=(0,3)",128,0,30,0
+  42               		.stabs	"uint32_t:t(3,6)=(0,5)",128,0,31,0
+  43               		.stabs	"int64_t:t(3,7)=(0,6)",128,0,33,0
+  44               		.stabs	"uint64_t:t(3,8)=(0,7)",128,0,34,0
+  45               		.stabs	"intptr_t:t(3,9)=(3,3)",128,0,36,0
+  46               		.stabs	"uintptr_t:t(3,10)=(3,4)",128,0,37,0
+  47               		.stabn	162,0,0,0
+  48               		.stabs	"/usr/local/avr/include/io.h",130,0,0,0
+  49               		.stabs	"/usr/local/avr/include/io-avr.h",130,0,0,0
+  50               		.stabs	"/usr/local/avr/include/iom8.h",130,0,0,0
+  51               		.stabn	162,0,0,0
+  52               		.stabn	162,0,0,0
+  53               		.stabs	"/usr/local/avr/include/iomacros.h",130,0,0,0
+  54               		.stabn	162,0,0,0
+  55               		.stabn	162,0,0,0
+  56               		.stabs	"/usr/local/avr/include/string.h",130,0,0,0
+  57               		.stabs	"/usr/local/avr/lib/gcc-lib/avr/3.2/include/stddef.h",130,0,0,0
+GAS LISTING /tmp/cc21ii16.s 			page 2
+
+
+  58               		.stabs	"size_t:t(9,1)=(0,4)",128,0,201,0
+  59               		.stabn	162,0,0,0
+  60               		.stabn	162,0,0,0
+  61               		.stabs	"/usr/local/avr/include/sig-avr.h",130,0,0,0
+  62               		.stabn	162,0,0,0
+  63               		.stabs	"/usr/local/avr/include/pgmspace.h",130,0,0,0
+  64               		.stabs	"/usr/local/avr/lib/gcc-lib/avr/3.2/include/stddef.h",130,0,0,0
+  65               		.stabn	162,0,0,0
+  66               		.stabs	"prog_void:t(11,1)=(11,2)=(11,2)",128,0,51,0
+  67               		.stabs	"prog_char:t(11,3)=(11,4)=@s8;r(11,4);-128;127;",128,0,52,0
+  68               		.stabs	"prog_uchar:t(11,5)=(11,6)=@s8;r(11,6);0;255;",128,0,53,0
+  69               		.stabs	"prog_int:t(11,7)=(11,8)=r(11,8);-32768;32767;",128,0,54,0
+  70               		.stabs	"prog_long:t(11,9)=(11,10)=@s32;r(11,10);0020000000000;0017777777777;",128,0,55,0
+  71               		.stabs	"prog_long_long:t(11,11)=(11,12)=@s64;r(11,12);01000000000000000000000;07777777777777777777
+  72               		.stabs	"/usr/local/avr/include/ina90.h",130,0,0,0
+  73               		.stabs	"/usr/local/avr/include/eeprom.h",130,0,0,0
+  74               		.stabs	"/usr/local/avr/lib/gcc-lib/avr/3.2/include/stddef.h",130,0,0,0
+  75               		.stabn	162,0,0,0
+  76               		.stabn	162,0,0,0
+  77               		.stabn	162,0,0,0
+  78               		.stabn	162,0,0,0
+  79               		.stabs	"TQWRotationInterruptFunc:t(2,1)=(2,2)=*(2,3)=f(0,20)",128,0,22,0
+  80               		.stabs	"TQWColumnInterruptFunc:t(2,4)=(2,2)",128,0,23,0
+  81               		.stabn	162,0,0,0
+  82               	.global	g_timer0StartValue
+  83               		.data
+  84               		.type	g_timer0StartValue,@object
+  85               		.size	g_timer0StartValue,1
+  86               	g_timer0StartValue:
+  87 0000 80        		.byte	-128
+  88               	.global	g_rotationInterruptHandler
+  89               		.type	g_rotationInterruptHandler,@object
+  90               		.size	g_rotationInterruptHandler,2
+  91               	g_rotationInterruptHandler:
+  92 0001 0000      		.word	0
+  93               	.global	g_columnInterruptHandler
+  94               		.type	g_columnInterruptHandler,@object
+  95               		.size	g_columnInterruptHandler,2
+  96               	g_columnInterruptHandler:
+  97 0003 0000      		.word	0
+  98               		.text
+  99               		.stabs	"_vector_9:F(0,20)",36,0,48,_vector_9
+ 100               	.global	_vector_9
+ 101               		.type	_vector_9,@function
+ 102               	_vector_9:
+   1:tqw.c         **** #include "tqw.h"
+   2:tqw.c         **** 
+   3:tqw.c         **** #if (RAMEND != 0x45F)
+   4:tqw.c         **** Shit shit shit!
+   5:tqw.c         **** #endif
+   6:tqw.c         **** 
+   7:tqw.c         **** volatile uint8_t g_timer0StartValue = 0x80;
+   8:tqw.c         **** volatile TQWRotationInterruptFunc g_rotationInterruptHandler = NULL;
+   9:tqw.c         **** volatile TQWColumnInterruptFunc g_columnInterruptHandler = NULL;
+  10:tqw.c         **** 
+  11:tqw.c         **** #define sei()  __asm__ __volatile__ ("sei" ::)
+  12:tqw.c         **** #define cli()  __asm__ __volatile__ ("cli" ::)
+GAS LISTING /tmp/cc21ii16.s 			page 3
+
+
+  13:tqw.c         **** 
+  14:tqw.c         **** inline void enable_external_int (unsigned char ints)
+  15:tqw.c         **** {
+  16:tqw.c         **** #ifdef EIMSK
+  17:tqw.c         ****     outp (ints, EIMSK);
+  18:tqw.c         **** #else
+  19:tqw.c         **** #ifdef GIMSK
+  20:tqw.c         ****     outp (ints, GIMSK);
+  21:tqw.c         **** #endif
+  22:tqw.c         **** #endif
+  23:tqw.c         **** }
+  24:tqw.c         **** 
+  25:tqw.c         **** inline void timer_enable_int (unsigned char ints)
+  26:tqw.c         **** {
+  27:tqw.c         **** #ifdef TIMSK
+  28:tqw.c         ****     outp (ints, TIMSK);
+  29:tqw.c         **** #endif
+  30:tqw.c         **** }
+  31:tqw.c         **** 
+  32:tqw.c         **** static void stopTimer0(void)
+  33:tqw.c         **** {
+  34:tqw.c         ****     *((uint8_t *) TCCR0) = 0;
+  35:tqw.c         **** }
+  36:tqw.c         **** 
+  37:tqw.c         **** static void startTimer0(void)
+  38:tqw.c         **** {
+  39:tqw.c         ****     *((uint8_t *) TCCR0) = BV(CS00) + BV(CS01); /* CK/64 */
+  40:tqw.c         **** }
+  41:tqw.c         **** 
+  42:tqw.c         **** static void resetTimer0(void)
+  43:tqw.c         **** {
+  44:tqw.c         ****     *((uint8_t *) TCNT0) = g_timer0StartValue;
+  45:tqw.c         **** }
+  46:tqw.c         **** 
+  47:tqw.c         **** SIGNAL(SIG_OVERFLOW0)
+  48:tqw.c         **** {
+ 103               		.stabn 68,0,48,.LM1-_vector_9
+ 104               	.LM1:
+ 105               	/* prologue: frame size=0 */
+ 106 0000 1F92      		push __zero_reg__
+ 107 0002 0F92      		push __tmp_reg__
+ 108 0004 0FB6      		in __tmp_reg__,__SREG__
+ 109 0006 0F92      		push __tmp_reg__
+ 110 0008 1124      		clr __zero_reg__
+ 111 000a 2F93      		push r18
+ 112 000c 3F93      		push r19
+ 113 000e 4F93      		push r20
+ 114 0010 5F93      		push r21
+ 115 0012 6F93      		push r22
+ 116 0014 7F93      		push r23
+ 117 0016 8F93      		push r24
+ 118 0018 9F93      		push r25
+ 119 001a AF93      		push r26
+ 120 001c BF93      		push r27
+ 121 001e EF93      		push r30
+ 122 0020 FF93      		push r31
+ 123               	/* prologue end (size=17) */
+GAS LISTING /tmp/cc21ii16.s 			page 4
+
+
+ 124               		.stabn 68,0,44,.LM2-_vector_9
+ 125               	.LM2:
+ 126               	.LBB2:
+ 127 0022 2091 0000 		lds r18,g_timer0StartValue
+ 128 0026 22BB      		out 50-0x20,r18
+  49:tqw.c         ****     resetTimer0();
+  50:tqw.c         ****     if (NULL != g_columnInterruptHandler) {
+ 129               		.stabn 68,0,50,.LM3-_vector_9
+ 130               	.LM3:
+ 131               	.LBE2:
+ 132 0028 A091 0000 		lds r26,g_columnInterruptHandler
+ 133 002c B091 0000 		lds r27,(g_columnInterruptHandler)+1
+ 134 0030 AB2B      		or r26,r27
+ 135 0032 29F0      		breq .L1
+  51:tqw.c         ****         g_columnInterruptHandler();
+ 136               		.stabn 68,0,51,.LM4-_vector_9
+ 137               	.LM4:
+ 138 0034 E091 0000 		lds r30,g_columnInterruptHandler
+ 139 0038 F091 0000 		lds r31,(g_columnInterruptHandler)+1
+ 140 003c 0995      		icall
+  52:tqw.c         ****     }
+  53:tqw.c         **** }
+ 141               		.stabn 68,0,53,.LM5-_vector_9
+ 142               	.LM5:
+ 143               	.L1:
+ 144               	/* epilogue: frame size=0 */
+ 145 003e FF91      		pop r31
+ 146 0040 EF91      		pop r30
+ 147 0042 BF91      		pop r27
+ 148 0044 AF91      		pop r26
+ 149 0046 9F91      		pop r25
+ 150 0048 8F91      		pop r24
+ 151 004a 7F91      		pop r23
+ 152 004c 6F91      		pop r22
+ 153 004e 5F91      		pop r21
+ 154 0050 4F91      		pop r20
+ 155 0052 3F91      		pop r19
+ 156 0054 2F91      		pop r18
+ 157 0056 0F90      		pop __tmp_reg__
+ 158 0058 0FBE      		out __SREG__,__tmp_reg__
+ 159 005a 0F90      		pop __tmp_reg__
+ 160 005c 1F90      		pop __zero_reg__
+ 161 005e 1895      		reti
+ 162               	/* epilogue end (size=17) */
+ 163               	/* function _vector_9 size 48 (14) */
+ 164               	.Lfe1:
+ 165               		.size	_vector_9,.Lfe1-_vector_9
+ 166               	.Lscope0:
+ 167               		.stabs	"",36,0,0,.Lscope0-_vector_9
+ 168               		.stabs	"_vector_1:F(0,20)",36,0,60,_vector_1
+ 169               	.global	_vector_1
+ 170               		.type	_vector_1,@function
+ 171               	_vector_1:
+  54:tqw.c         **** 
+  55:tqw.c         **** /* The rotation sensor tripped. Wake up the column timer in case it 
+  56:tqw.c         ****  * was asleep, and call the application's interrupt function if it 
+  57:tqw.c         ****  * exists.
+GAS LISTING /tmp/cc21ii16.s 			page 5
+
+
+  58:tqw.c         ****  */
+  59:tqw.c         **** SIGNAL(SIG_INTERRUPT0)
+  60:tqw.c         **** {
+ 172               		.stabn 68,0,60,.LM6-_vector_1
+ 173               	.LM6:
+ 174               	/* prologue: frame size=0 */
+ 175 0060 1F92      		push __zero_reg__
+ 176 0062 0F92      		push __tmp_reg__
+ 177 0064 0FB6      		in __tmp_reg__,__SREG__
+ 178 0066 0F92      		push __tmp_reg__
+ 179 0068 1124      		clr __zero_reg__
+ 180 006a 2F93      		push r18
+ 181 006c 3F93      		push r19
+ 182 006e 4F93      		push r20
+ 183 0070 5F93      		push r21
+ 184 0072 6F93      		push r22
+ 185 0074 7F93      		push r23
+ 186 0076 8F93      		push r24
+ 187 0078 9F93      		push r25
+ 188 007a AF93      		push r26
+ 189 007c BF93      		push r27
+ 190 007e EF93      		push r30
+ 191 0080 FF93      		push r31
+ 192               	/* prologue end (size=17) */
+ 193               		.stabn 68,0,39,.LM7-_vector_1
+ 194               	.LM7:
+ 195               	.LBB3:
+ 196 0082 23E0      		ldi r18,lo8(3)
+ 197 0084 23BB      		out 51-0x20,r18
+  61:tqw.c         ****     startTimer0();
+  62:tqw.c         ****     if (NULL != g_rotationInterruptHandler) {
+ 198               		.stabn 68,0,62,.LM8-_vector_1
+ 199               	.LM8:
+ 200               	.LBE3:
+ 201 0086 A091 0000 		lds r26,g_rotationInterruptHandler
+ 202 008a B091 0000 		lds r27,(g_rotationInterruptHandler)+1
+ 203 008e AB2B      		or r26,r27
+ 204 0090 29F0      		breq .L4
+  63:tqw.c         ****         g_rotationInterruptHandler();
+ 205               		.stabn 68,0,63,.LM9-_vector_1
+ 206               	.LM9:
+ 207 0092 E091 0000 		lds r30,g_rotationInterruptHandler
+ 208 0096 F091 0000 		lds r31,(g_rotationInterruptHandler)+1
+ 209 009a 0995      		icall
+  64:tqw.c         ****     }
+  65:tqw.c         **** }
+ 210               		.stabn 68,0,65,.LM10-_vector_1
+ 211               	.LM10:
+ 212               	.L4:
+ 213               	/* epilogue: frame size=0 */
+ 214 009c FF91      		pop r31
+ 215 009e EF91      		pop r30
+ 216 00a0 BF91      		pop r27
+ 217 00a2 AF91      		pop r26
+ 218 00a4 9F91      		pop r25
+ 219 00a6 8F91      		pop r24
+ 220 00a8 7F91      		pop r23
+GAS LISTING /tmp/cc21ii16.s 			page 6
+
+
+ 221 00aa 6F91      		pop r22
+ 222 00ac 5F91      		pop r21
+ 223 00ae 4F91      		pop r20
+ 224 00b0 3F91      		pop r19
+ 225 00b2 2F91      		pop r18
+ 226 00b4 0F90      		pop __tmp_reg__
+ 227 00b6 0FBE      		out __SREG__,__tmp_reg__
+ 228 00b8 0F90      		pop __tmp_reg__
+ 229 00ba 1F90      		pop __zero_reg__
+ 230 00bc 1895      		reti
+ 231               	/* epilogue end (size=17) */
+ 232               	/* function _vector_1 size 47 (13) */
+ 233               	.Lfe2:
+ 234               		.size	_vector_1,.Lfe2-_vector_1
+ 235               	.Lscope1:
+ 236               		.stabs	"",36,0,0,.Lscope1-_vector_1
+ 237               		.stabs	"TQWLoadLatch:F(0,20)",36,0,130,TQWLoadLatch
+ 238               		.stabs	"c:P(1,1)=k(3,2)",64,0,129,24
+ 239               	.global	TQWLoadLatch
+ 240               		.type	TQWLoadLatch,@function
+ 241               	TQWLoadLatch:
+  66:tqw.c         **** 
+  67:tqw.c         **** /* This counter never stops.
+  68:tqw.c         ****  */
+  69:tqw.c         **** static void startCounter1(void)
+  70:tqw.c         **** {
+  71:tqw.c         ****     *((uint8_t *) TCCR1B) = BV(CS10) + BV(CS11); /* CK/64 */
+  72:tqw.c         **** }
+  73:tqw.c         **** 
+  74:tqw.c         **** static void enableTimer0Overflow(void)
+  75:tqw.c         **** {
+  76:tqw.c         ****     timer_enable_int(BV(TOIE0));
+  77:tqw.c         **** }
+  78:tqw.c         **** 
+  79:tqw.c         **** static void enableExternalInterrupts(void)
+  80:tqw.c         **** {
+  81:tqw.c         ****     /* Falling edge of INT0 triggers interrupt. */
+  82:tqw.c         ****     *((uint8_t *) MCUCR) = BV(ISC01);
+  83:tqw.c         ****     enable_external_int(BV(INT0));
+  84:tqw.c         **** }
+  85:tqw.c         **** 
+  86:tqw.c         **** void TQWDelay(uint8_t c)
+  87:tqw.c         **** {
+  88:tqw.c         ****     uint8_t i, j, k;
+  89:tqw.c         ****     for (i = 0; i < c; i++) {
+  90:tqw.c         ****         for (j = 0; j < 32; j++) {
+  91:tqw.c         ****             for (k = 0; k < 32; k++) {
+  92:tqw.c         ****                 volatile uint8_t x = 0;
+  93:tqw.c         ****                 x++;
+  94:tqw.c         ****             }
+  95:tqw.c         ****         }
+  96:tqw.c         ****     }
+  97:tqw.c         **** }
+  98:tqw.c         **** 
+  99:tqw.c         **** void TQWSetRotationInterrupt(TQWRotationInterruptFunc f)
+ 100:tqw.c         **** {
+ 101:tqw.c         ****     g_rotationInterruptHandler = f;
+GAS LISTING /tmp/cc21ii16.s 			page 7
+
+
+ 102:tqw.c         **** }
+ 103:tqw.c         **** 
+ 104:tqw.c         **** uint16_t TQWGetAndResetRotationInterruptTime(void)
+ 105:tqw.c         **** {
+ 106:tqw.c         ****     uint16_t elapsed = *((uint16_t *) TCNT1L);
+ 107:tqw.c         ****     *((uint16_t *) TCNT1L) = 0;    
+ 108:tqw.c         ****     return elapsed;
+ 109:tqw.c         **** }
+ 110:tqw.c         **** 
+ 111:tqw.c         **** void TQWSetColumnInterrupt(TQWColumnInterruptFunc f)
+ 112:tqw.c         **** {
+ 113:tqw.c         ****     g_columnInterruptHandler = f;
+ 114:tqw.c         **** }
+ 115:tqw.c         **** 
+ 116:tqw.c         **** void TQWSetColumnInterruptTimer(const uint8_t t)
+ 117:tqw.c         **** {
+ 118:tqw.c         ****     g_timer0StartValue = t;
+ 119:tqw.c         **** }
+ 120:tqw.c         **** 
+ 121:tqw.c         **** void TQWSleepColumnInterruptTimer(void)
+ 122:tqw.c         **** {
+ 123:tqw.c         ****     stopTimer0();
+ 124:tqw.c         **** }
+ 125:tqw.c         **** 
+ 126:tqw.c         **** #define COLUMN_PORT_LOW PORTC
+ 127:tqw.c         **** #define COLUMN_PORT_HIGH PORTD
+ 128:tqw.c         **** 
+ 129:tqw.c         **** void TQWLoadLatch(const uint8_t c)
+ 130:tqw.c         **** {
+ 242               		.stabn 68,0,130,.LM11-TQWLoadLatch
+ 243               	.LM11:
+ 244               	/* prologue: frame size=0 */
+ 245               	/* prologue end (size=0) */
+ 131:tqw.c         ****     *((uint8_t *) COLUMN_PORT_LOW) = c;
+ 246               		.stabn 68,0,131,.LM12-TQWLoadLatch
+ 247               	.LM12:
+ 248 00be 8093 1500 		sts 21,r24
+ 132:tqw.c         ****     if (c & BV(6)) {
+ 249               		.stabn 68,0,132,.LM13-TQWLoadLatch
+ 250               	.LM13:
+ 251 00c2 86FF      		sbrs r24,6
+ 252 00c4 07C0      		rjmp .L8
+ 133:tqw.c         ****         sbi(COLUMN_PORT_HIGH, 6);
+ 253               		.stabn 68,0,133,.LM14-TQWLoadLatch
+ 254               	.LM14:
+ 255               	/* #APP */
+ 256 00c6 969A      		sbi 18,6
+ 257               	/* #NOAPP */
+ 258               	.L15:
+ 134:tqw.c         ****     } else {
+ 135:tqw.c         ****         cbi(COLUMN_PORT_HIGH, 6);
+ 136:tqw.c         ****     }
+ 137:tqw.c         ****     if (c & BV(7)) {
+ 259               		.stabn 68,0,137,.LM15-TQWLoadLatch
+ 260               	.LM15:
+ 261 00c8 8823      		tst r24
+ 262 00ca 14F4      		brge .L22
+GAS LISTING /tmp/cc21ii16.s 			page 8
+
+
+ 138:tqw.c         ****         sbi(COLUMN_PORT_HIGH, 7);
+ 263               		.stabn 68,0,138,.LM16-TQWLoadLatch
+ 264               	.LM16:
+ 265               	/* #APP */
+ 266 00cc 979A      		sbi 18,7
+ 267               	/* #NOAPP */
+ 268 00ce 04C0      		rjmp .L7
+ 269               	.L22:
+ 139:tqw.c         ****     } else {
+ 140:tqw.c         ****         cbi(COLUMN_PORT_HIGH, 7);
+ 270               		.stabn 68,0,140,.LM17-TQWLoadLatch
+ 271               	.LM17:
+ 272               	/* #APP */
+ 273 00d0 9798      		cbi 18,7
+ 274               	/* #NOAPP */
+ 275 00d2 02C0      		rjmp .L7
+ 276               	.L8:
+ 277               		.stabn 68,0,135,.LM18-TQWLoadLatch
+ 278               	.LM18:
+ 279               	/* #APP */
+ 280 00d4 9698      		cbi 18,6
+ 281               	/* #NOAPP */
+ 282 00d6 F8CF      		rjmp .L15
+ 141:tqw.c         ****     }
+ 142:tqw.c         **** }
+ 283               		.stabn 68,0,142,.LM19-TQWLoadLatch
+ 284               	.LM19:
+ 285               	.L7:
+ 286               	/* epilogue: frame size=0 */
+ 287 00d8 0895      		ret
+ 288               	/* epilogue end (size=1) */
+ 289               	/* function TQWLoadLatch size 18 (17) */
+ 290               	.Lfe3:
+ 291               		.size	TQWLoadLatch,.Lfe3-TQWLoadLatch
+ 292               	.Lscope2:
+ 293               		.stabs	"",36,0,0,.Lscope2-TQWLoadLatch
+ 294               		.stabs	"enable_external_int:F(0,20)",36,0,15,enable_external_int
+ 295               		.stabs	"ints:P(0,11)",64,0,14,24
+ 296               	.global	enable_external_int
+ 297               		.type	enable_external_int,@function
+ 298               	enable_external_int:
+ 299               		.stabn 68,0,15,.LM20-enable_external_int
+ 300               	.LM20:
+ 301               	/* prologue: frame size=0 */
+ 302               	/* prologue end (size=0) */
+ 303               		.stabn 68,0,20,.LM21-enable_external_int
+ 304               	.LM21:
+ 305               	/* #APP */
+ 306 00da 8BBF      		out 59,r24
+ 307               		.stabn 68,0,23,.LM22-enable_external_int
+ 308               	.LM22:
+ 309               	/* #NOAPP */
+ 310               	/* epilogue: frame size=0 */
+ 311 00dc 0895      		ret
+ 312               	/* epilogue end (size=1) */
+ 313               	/* function enable_external_int size 3 (2) */
+ 314               	.Lfe4:
+GAS LISTING /tmp/cc21ii16.s 			page 9
+
+
+ 315               		.size	enable_external_int,.Lfe4-enable_external_int
+ 316               	.Lscope3:
+ 317               		.stabs	"",36,0,0,.Lscope3-enable_external_int
+ 318               		.stabs	"timer_enable_int:F(0,20)",36,0,26,timer_enable_int
+ 319               		.stabs	"ints:P(0,11)",64,0,25,24
+ 320               	.global	timer_enable_int
+ 321               		.type	timer_enable_int,@function
+ 322               	timer_enable_int:
+ 323               		.stabn 68,0,26,.LM23-timer_enable_int
+ 324               	.LM23:
+ 325               	/* prologue: frame size=0 */
+ 326               	/* prologue end (size=0) */
+ 327               		.stabn 68,0,28,.LM24-timer_enable_int
+ 328               	.LM24:
+ 329               	/* #APP */
+ 330 00de 89BF      		out 57,r24
+ 331               		.stabn 68,0,30,.LM25-timer_enable_int
+ 332               	.LM25:
+ 333               	/* #NOAPP */
+ 334               	/* epilogue: frame size=0 */
+ 335 00e0 0895      		ret
+ 336               	/* epilogue end (size=1) */
+ 337               	/* function timer_enable_int size 3 (2) */
+ 338               	.Lfe5:
+ 339               		.size	timer_enable_int,.Lfe5-timer_enable_int
+ 340               	.Lscope4:
+ 341               		.stabs	"",36,0,0,.Lscope4-timer_enable_int
+ 342               		.stabs	"TQWDelay:F(0,20)",36,0,87,TQWDelay
+ 343               		.stabs	"c:P(3,2)",64,0,86,20
+ 344               	.global	TQWDelay
+ 345               		.type	TQWDelay,@function
+ 346               	TQWDelay:
+ 347               		.stabn 68,0,87,.LM26-TQWDelay
+ 348               	.LM26:
+ 349               	/* prologue: frame size=1 */
+ 350 00e2 CF93      		push r28
+ 351 00e4 DF93      		push r29
+ 352 00e6 CDB7      		in r28,__SP_L__
+ 353 00e8 DEB7      		in r29,__SP_H__
+ 354 00ea 2197      		sbiw r28,1
+ 355 00ec 0FB6      		in __tmp_reg__,__SREG__
+ 356 00ee F894      		cli
+ 357 00f0 DEBF      		out __SP_H__,r29
+ 358 00f2 0FBE      		out __SREG__,__tmp_reg__
+ 359 00f4 CDBF      		out __SP_L__,r28
+ 360               	/* prologue end (size=10) */
+ 361 00f6 482F      		mov r20,r24
+ 362               		.stabn 68,0,89,.LM27-TQWDelay
+ 363               	.LM27:
+ 364               	.LBB4:
+ 365 00f8 30E0      		ldi r19,lo8(0)
+ 366 00fa 3817      		cp r19,r24
+ 367 00fc 78F4      		brsh .L269
+ 368               	.L267:
+ 369               		.stabn 68,0,90,.LM28-TQWDelay
+ 370               	.LM28:
+ 371 00fe 20E0      		ldi r18,lo8(0)
+GAS LISTING /tmp/cc21ii16.s 			page 10
+
+
+ 372               	.L266:
+ 373               		.stabn 68,0,91,.LM29-TQWDelay
+ 374               	.LM29:
+ 375 0100 90E0      		ldi r25,lo8(0)
+ 376               	.L265:
+ 377               		.stabn 68,0,92,.LM30-TQWDelay
+ 378               	.LM30:
+ 379               	.LBB5:
+ 380 0102 1982      		std Y+1,__zero_reg__
+ 381               		.stabn 68,0,93,.LM31-TQWDelay
+ 382               	.LM31:
+ 383 0104 5981      		ldd r21,Y+1
+ 384 0106 5F5F      		subi r21,lo8(-(1))
+ 385 0108 5983      		std Y+1,r21
+ 386               		.stabn 68,0,91,.LM32-TQWDelay
+ 387               	.LM32:
+ 388               	.LBE5:
+ 389 010a 9F5F      		subi r25,lo8(-(1))
+ 390 010c 9032      		cpi r25,lo8(32)
+ 391 010e C8F3      		brlo .L265
+ 392               		.stabn 68,0,90,.LM33-TQWDelay
+ 393               	.LM33:
+ 394 0110 2F5F      		subi r18,lo8(-(1))
+ 395 0112 2032      		cpi r18,lo8(32)
+ 396 0114 A8F3      		brlo .L266
+ 397               		.stabn 68,0,89,.LM34-TQWDelay
+ 398               	.LM34:
+ 399 0116 3F5F      		subi r19,lo8(-(1))
+ 400 0118 3417      		cp r19,r20
+ 401 011a 88F3      		brlo .L267
+ 402               	.L269:
+ 403               		.stabn 68,0,97,.LM35-TQWDelay
+ 404               	.LM35:
+ 405               	.LBE4:
+ 406               	/* epilogue: frame size=1 */
+ 407 011c 2196      		adiw r28,1
+ 408 011e 0FB6      		in __tmp_reg__,__SREG__
+ 409 0120 F894      		cli
+ 410 0122 DEBF      		out __SP_H__,r29
+ 411 0124 0FBE      		out __SREG__,__tmp_reg__
+ 412 0126 CDBF      		out __SP_L__,r28
+ 413 0128 DF91      		pop r29
+ 414 012a CF91      		pop r28
+ 415 012c 0895      		ret
+ 416               	/* epilogue end (size=9) */
+ 417               	/* function TQWDelay size 38 (19) */
+ 418               	.Lfe6:
+ 419               		.size	TQWDelay,.Lfe6-TQWDelay
+ 420               		.stabs	"i:r(3,2)",64,0,88,19
+ 421               		.stabs	"j:r(3,2)",64,0,88,18
+ 422               		.stabs	"k:r(3,2)",64,0,88,25
+ 423               		.stabn	192,0,0,.LBB4-TQWDelay
+ 424               		.stabs	"x:(1,2)=B(3,2)",128,0,92,1
+ 425               		.stabn	192,0,0,.LBB5-TQWDelay
+ 426               		.stabn	224,0,0,.LBE5-TQWDelay
+ 427               		.stabn	224,0,0,.LBE4-TQWDelay
+ 428               	.Lscope5:
+GAS LISTING /tmp/cc21ii16.s 			page 11
+
+
+ 429               		.stabs	"",36,0,0,.Lscope5-TQWDelay
+ 430               		.stabs	"TQWSetRotationInterrupt:F(0,20)",36,0,100,TQWSetRotationInterrupt
+ 431               		.stabs	"f:P(2,1)",64,0,99,24
+ 432               	.global	TQWSetRotationInterrupt
+ 433               		.type	TQWSetRotationInterrupt,@function
+ 434               	TQWSetRotationInterrupt:
+ 435               		.stabn 68,0,100,.LM36-TQWSetRotationInterrupt
+ 436               	.LM36:
+ 437               	/* prologue: frame size=0 */
+ 438               	/* prologue end (size=0) */
+ 439               		.stabn 68,0,101,.LM37-TQWSetRotationInterrupt
+ 440               	.LM37:
+ 441 012e 9093 0000 		sts (g_rotationInterruptHandler)+1,r25
+ 442 0132 8093 0000 		sts g_rotationInterruptHandler,r24
+ 443               		.stabn 68,0,102,.LM38-TQWSetRotationInterrupt
+ 444               	.LM38:
+ 445               	/* epilogue: frame size=0 */
+ 446 0136 0895      		ret
+ 447               	/* epilogue end (size=1) */
+ 448               	/* function TQWSetRotationInterrupt size 5 (4) */
+ 449               	.Lfe7:
+ 450               		.size	TQWSetRotationInterrupt,.Lfe7-TQWSetRotationInterrupt
+ 451               	.Lscope6:
+ 452               		.stabs	"",36,0,0,.Lscope6-TQWSetRotationInterrupt
+ 453               		.stabs	"TQWGetAndResetRotationInterruptTime:F(3,4)",36,0,105,TQWGetAndResetRotationInterruptTime
+ 454               	.global	TQWGetAndResetRotationInterruptTime
+ 455               		.type	TQWGetAndResetRotationInterruptTime,@function
+ 456               	TQWGetAndResetRotationInterruptTime:
+ 457               		.stabn 68,0,105,.LM39-TQWGetAndResetRotationInterruptTime
+ 458               	.LM39:
+ 459               	/* prologue: frame size=0 */
+ 460               	/* prologue end (size=0) */
+ 461               	.LBB6:
+ 462               		.stabn 68,0,106,.LM40-TQWGetAndResetRotationInterruptTime
+ 463               	.LM40:
+ 464 0138 8CB1      		in r24,44-0x20
+ 465 013a 9DB1      		in r25,(44)+1-0x20
+ 466               		.stabn 68,0,107,.LM41-TQWGetAndResetRotationInterruptTime
+ 467               	.LM41:
+ 468 013c 1DB8      		out (44)+1-0x20,__zero_reg__
+ 469 013e 1CB8      		out 44-0x20,__zero_reg__
+ 470               		.stabn 68,0,108,.LM42-TQWGetAndResetRotationInterruptTime
+ 471               	.LM42:
+ 472               	.LBE6:
+ 473               		.stabn 68,0,109,.LM43-TQWGetAndResetRotationInterruptTime
+ 474               	.LM43:
+ 475               	/* epilogue: frame size=0 */
+ 476 0140 0895      		ret
+ 477               	/* epilogue end (size=1) */
+ 478               	/* function TQWGetAndResetRotationInterruptTime size 5 (4) */
+ 479               	.Lfe8:
+ 480               		.size	TQWGetAndResetRotationInterruptTime,.Lfe8-TQWGetAndResetRotationInterruptTime
+ 481               		.stabs	"elapsed:r(3,4)",64,0,106,24
+ 482               		.stabn	192,0,0,.LBB6-TQWGetAndResetRotationInterruptTime
+ 483               		.stabn	224,0,0,.LBE6-TQWGetAndResetRotationInterruptTime
+ 484               	.Lscope7:
+ 485               		.stabs	"",36,0,0,.Lscope7-TQWGetAndResetRotationInterruptTime
+GAS LISTING /tmp/cc21ii16.s 			page 12
+
+
+ 486               		.stabs	"TQWSetColumnInterrupt:F(0,20)",36,0,112,TQWSetColumnInterrupt
+ 487               		.stabs	"f:P(2,4)",64,0,111,24
+ 488               	.global	TQWSetColumnInterrupt
+ 489               		.type	TQWSetColumnInterrupt,@function
+ 490               	TQWSetColumnInterrupt:
+ 491               		.stabn 68,0,112,.LM44-TQWSetColumnInterrupt
+ 492               	.LM44:
+ 493               	/* prologue: frame size=0 */
+ 494               	/* prologue end (size=0) */
+ 495               		.stabn 68,0,113,.LM45-TQWSetColumnInterrupt
+ 496               	.LM45:
+ 497 0142 9093 0000 		sts (g_columnInterruptHandler)+1,r25
+ 498 0146 8093 0000 		sts g_columnInterruptHandler,r24
+ 499               		.stabn 68,0,114,.LM46-TQWSetColumnInterrupt
+ 500               	.LM46:
+ 501               	/* epilogue: frame size=0 */
+ 502 014a 0895      		ret
+ 503               	/* epilogue end (size=1) */
+ 504               	/* function TQWSetColumnInterrupt size 5 (4) */
+ 505               	.Lfe9:
+ 506               		.size	TQWSetColumnInterrupt,.Lfe9-TQWSetColumnInterrupt
+ 507               	.Lscope8:
+ 508               		.stabs	"",36,0,0,.Lscope8-TQWSetColumnInterrupt
+ 509               		.stabs	"TQWSetColumnInterruptTimer:F(0,20)",36,0,117,TQWSetColumnInterruptTimer
+ 510               		.stabs	"t:P(1,1)",64,0,116,24
+ 511               	.global	TQWSetColumnInterruptTimer
+ 512               		.type	TQWSetColumnInterruptTimer,@function
+ 513               	TQWSetColumnInterruptTimer:
+ 514               		.stabn 68,0,117,.LM47-TQWSetColumnInterruptTimer
+ 515               	.LM47:
+ 516               	/* prologue: frame size=0 */
+ 517               	/* prologue end (size=0) */
+ 518               		.stabn 68,0,118,.LM48-TQWSetColumnInterruptTimer
+ 519               	.LM48:
+ 520 014c 8093 0000 		sts g_timer0StartValue,r24
+ 521               		.stabn 68,0,119,.LM49-TQWSetColumnInterruptTimer
+ 522               	.LM49:
+ 523               	/* epilogue: frame size=0 */
+ 524 0150 0895      		ret
+ 525               	/* epilogue end (size=1) */
+ 526               	/* function TQWSetColumnInterruptTimer size 3 (2) */
+ 527               	.Lfe10:
+ 528               		.size	TQWSetColumnInterruptTimer,.Lfe10-TQWSetColumnInterruptTimer
+ 529               	.Lscope9:
+ 530               		.stabs	"",36,0,0,.Lscope9-TQWSetColumnInterruptTimer
+ 531               		.stabs	"TQWSleepColumnInterruptTimer:F(0,20)",36,0,122,TQWSleepColumnInterruptTimer
+ 532               	.global	TQWSleepColumnInterruptTimer
+ 533               		.type	TQWSleepColumnInterruptTimer,@function
+ 534               	TQWSleepColumnInterruptTimer:
+ 535               		.stabn 68,0,122,.LM50-TQWSleepColumnInterruptTimer
+ 536               	.LM50:
+ 537               	/* prologue: frame size=0 */
+ 538               	/* prologue end (size=0) */
+ 539               		.stabn 68,0,33,.LM51-TQWSleepColumnInterruptTimer
+ 540               	.LM51:
+ 541               	.LBB7:
+ 542               		.stabn 68,0,34,.LM52-TQWSleepColumnInterruptTimer
+GAS LISTING /tmp/cc21ii16.s 			page 13
+
+
+ 543               	.LM52:
+ 544 0152 13BA      		out 51-0x20,__zero_reg__
+ 545               	.LBE7:
+ 546               		.stabn 68,0,124,.LM53-TQWSleepColumnInterruptTimer
+ 547               	.LM53:
+ 548               	/* epilogue: frame size=0 */
+ 549 0154 0895      		ret
+ 550               	/* epilogue end (size=1) */
+ 551               	/* function TQWSleepColumnInterruptTimer size 2 (1) */
+ 552               	.Lfe11:
+ 553               		.size	TQWSleepColumnInterruptTimer,.Lfe11-TQWSleepColumnInterruptTimer
+ 554               	.Lscope10:
+ 555               		.stabs	"",36,0,0,.Lscope10-TQWSleepColumnInterruptTimer
+ 556               		.stabs	"TQWStrobeRed:F(0,20)",36,0,149,TQWStrobeRed
+ 557               	.global	TQWStrobeRed
+ 558               		.type	TQWStrobeRed,@function
+ 559               	TQWStrobeRed:
+ 143:tqw.c         **** 
+ 144:tqw.c         **** #define RED_LATCH_BIT (0)
+ 145:tqw.c         **** #define GREEN_LATCH_BIT (4)
+ 146:tqw.c         **** #define BLUE_LATCH_BIT (5)
+ 147:tqw.c         **** 
+ 148:tqw.c         **** void TQWStrobeRed(void)
+ 149:tqw.c         **** {
+ 560               		.stabn 68,0,149,.LM54-TQWStrobeRed
+ 561               	.LM54:
+ 562               	/* prologue: frame size=0 */
+ 563               	/* prologue end (size=0) */
+ 150:tqw.c         ****     sbi(PORTB, RED_LATCH_BIT); cbi(PORTB, RED_LATCH_BIT);
+ 564               		.stabn 68,0,150,.LM55-TQWStrobeRed
+ 565               	.LM55:
+ 566               	/* #APP */
+ 567 0156 C09A      		sbi 24,0
+ 568 0158 C098      		cbi 24,0
+ 151:tqw.c         **** }
+ 569               		.stabn 68,0,151,.LM56-TQWStrobeRed
+ 570               	.LM56:
+ 571               	/* #NOAPP */
+ 572               	/* epilogue: frame size=0 */
+ 573 015a 0895      		ret
+ 574               	/* epilogue end (size=1) */
+ 575               	/* function TQWStrobeRed size 5 (4) */
+ 576               	.Lfe12:
+ 577               		.size	TQWStrobeRed,.Lfe12-TQWStrobeRed
+ 578               	.Lscope11:
+ 579               		.stabs	"",36,0,0,.Lscope11-TQWStrobeRed
+ 580               		.stabs	"TQWStrobeGreen:F(0,20)",36,0,154,TQWStrobeGreen
+ 581               	.global	TQWStrobeGreen
+ 582               		.type	TQWStrobeGreen,@function
+ 583               	TQWStrobeGreen:
+ 152:tqw.c         **** 
+ 153:tqw.c         **** void TQWStrobeGreen(void)
+ 154:tqw.c         **** {
+ 584               		.stabn 68,0,154,.LM57-TQWStrobeGreen
+ 585               	.LM57:
+ 586               	/* prologue: frame size=0 */
+ 587               	/* prologue end (size=0) */
+GAS LISTING /tmp/cc21ii16.s 			page 14
+
+
+ 155:tqw.c         ****     sbi(PORTD, GREEN_LATCH_BIT); cbi(PORTD, GREEN_LATCH_BIT);
+ 588               		.stabn 68,0,155,.LM58-TQWStrobeGreen
+ 589               	.LM58:
+ 590               	/* #APP */
+ 591 015c 949A      		sbi 18,4
+ 592 015e 9498      		cbi 18,4
+ 156:tqw.c         **** }
+ 593               		.stabn 68,0,156,.LM59-TQWStrobeGreen
+ 594               	.LM59:
+ 595               	/* #NOAPP */
+ 596               	/* epilogue: frame size=0 */
+ 597 0160 0895      		ret
+ 598               	/* epilogue end (size=1) */
+ 599               	/* function TQWStrobeGreen size 5 (4) */
+ 600               	.Lfe13:
+ 601               		.size	TQWStrobeGreen,.Lfe13-TQWStrobeGreen
+ 602               	.Lscope12:
+ 603               		.stabs	"",36,0,0,.Lscope12-TQWStrobeGreen
+ 604               		.stabs	"TQWStrobeBlue:F(0,20)",36,0,159,TQWStrobeBlue
+ 605               	.global	TQWStrobeBlue
+ 606               		.type	TQWStrobeBlue,@function
+ 607               	TQWStrobeBlue:
+ 157:tqw.c         **** 
+ 158:tqw.c         **** void TQWStrobeBlue(void)
+ 159:tqw.c         **** {
+ 608               		.stabn 68,0,159,.LM60-TQWStrobeBlue
+ 609               	.LM60:
+ 610               	/* prologue: frame size=0 */
+ 611               	/* prologue end (size=0) */
+ 160:tqw.c         ****     sbi(PORTD, BLUE_LATCH_BIT); cbi(PORTD, BLUE_LATCH_BIT);
+ 612               		.stabn 68,0,160,.LM61-TQWStrobeBlue
+ 613               	.LM61:
+ 614               	/* #APP */
+ 615 0162 959A      		sbi 18,5
+ 616 0164 9598      		cbi 18,5
+ 161:tqw.c         **** }
+ 617               		.stabn 68,0,161,.LM62-TQWStrobeBlue
+ 618               	.LM62:
+ 619               	/* #NOAPP */
+ 620               	/* epilogue: frame size=0 */
+ 621 0166 0895      		ret
+ 622               	/* epilogue end (size=1) */
+ 623               	/* function TQWStrobeBlue size 5 (4) */
+ 624               	.Lfe14:
+ 625               		.size	TQWStrobeBlue,.Lfe14-TQWStrobeBlue
+ 626               	.Lscope13:
+ 627               		.stabs	"",36,0,0,.Lscope13-TQWStrobeBlue
+ 628               		.stabs	"TQWExtinguishLights:F(0,20)",36,0,164,TQWExtinguishLights
+ 629               	.global	TQWExtinguishLights
+ 630               		.type	TQWExtinguishLights,@function
+ 631               	TQWExtinguishLights:
+ 162:tqw.c         **** 
+ 163:tqw.c         **** void TQWExtinguishLights(void)
+ 164:tqw.c         **** {
+ 632               		.stabn 68,0,164,.LM63-TQWExtinguishLights
+ 633               	.LM63:
+ 634               	/* prologue: frame size=0 */
+GAS LISTING /tmp/cc21ii16.s 			page 15
+
+
+ 635               	/* prologue end (size=0) */
+ 165:tqw.c         ****     TQWLoadLatch(0);
+ 636               		.stabn 68,0,165,.LM64-TQWExtinguishLights
+ 637               	.LM64:
+ 638 0168 80E0      		ldi r24,lo8(0)
+ 639 016a A9DF      		rcall TQWLoadLatch
+ 640               		.stabn 68,0,149,.LM65-TQWExtinguishLights
+ 641               	.LM65:
+ 642               	.LBB8:
+ 643               		.stabn 68,0,150,.LM66-TQWExtinguishLights
+ 644               	.LM66:
+ 645               	/* #APP */
+ 646 016c C09A      		sbi 24,0
+ 647 016e C098      		cbi 24,0
+ 648               	/* #NOAPP */
+ 649               	.LBE8:
+ 650               		.stabn 68,0,154,.LM67-TQWExtinguishLights
+ 651               	.LM67:
+ 652               	.LBB9:
+ 653               		.stabn 68,0,155,.LM68-TQWExtinguishLights
+ 654               	.LM68:
+ 655               	/* #APP */
+ 656 0170 949A      		sbi 18,4
+ 657 0172 9498      		cbi 18,4
+ 658               	/* #NOAPP */
+ 659               	.LBE9:
+ 660               		.stabn 68,0,159,.LM69-TQWExtinguishLights
+ 661               	.LM69:
+ 662               	.LBB10:
+ 663               		.stabn 68,0,160,.LM70-TQWExtinguishLights
+ 664               	.LM70:
+ 665               	/* #APP */
+ 666 0174 959A      		sbi 18,5
+ 667 0176 9598      		cbi 18,5
+ 668               	/* #NOAPP */
+ 669               	.LBE10:
+ 166:tqw.c         ****     TQWStrobeRed();
+ 167:tqw.c         ****     TQWStrobeGreen();
+ 168:tqw.c         ****     TQWStrobeBlue();
+ 169:tqw.c         **** }
+ 670               		.stabn 68,0,169,.LM71-TQWExtinguishLights
+ 671               	.LM71:
+ 672               	/* epilogue: frame size=0 */
+ 673 0178 0895      		ret
+ 674               	/* epilogue end (size=1) */
+ 675               	/* function TQWExtinguishLights size 15 (14) */
+ 676               	.Lfe15:
+ 677               		.size	TQWExtinguishLights,.Lfe15-TQWExtinguishLights
+ 678               	.Lscope14:
+ 679               		.stabs	"",36,0,0,.Lscope14-TQWExtinguishLights
+ 680               		.stabs	"TQWInit:F(0,20)",36,0,235,TQWInit
+ 681               	.global	TQWInit
+ 682               		.type	TQWInit,@function
+ 683               	TQWInit:
+ 170:tqw.c         **** 
+ 171:tqw.c         **** static void lightPixels(uint8_t color, uint8_t pixels)
+ 172:tqw.c         **** {
+GAS LISTING /tmp/cc21ii16.s 			page 16
+
+
+ 173:tqw.c         ****     if (color & 1) {
+ 174:tqw.c         ****         TQWLoadLatch(pixels);
+ 175:tqw.c         **** 	} else {
+ 176:tqw.c         **** 	    TQWLoadLatch(0);
+ 177:tqw.c         **** 	}
+ 178:tqw.c         ****     TQWStrobeRed();
+ 179:tqw.c         ****     if (color & 2) {
+ 180:tqw.c         ****         TQWLoadLatch(pixels);
+ 181:tqw.c         **** 	} else {
+ 182:tqw.c         **** 	    TQWLoadLatch(0);
+ 183:tqw.c         **** 	}
+ 184:tqw.c         ****     TQWStrobeGreen();
+ 185:tqw.c         ****     if (color & 4) {
+ 186:tqw.c         ****         TQWLoadLatch(pixels);
+ 187:tqw.c         **** 	} else {
+ 188:tqw.c         **** 	    TQWLoadLatch(0);
+ 189:tqw.c         **** 	}
+ 190:tqw.c         ****     TQWStrobeBlue();
+ 191:tqw.c         **** }
+ 192:tqw.c         **** 
+ 193:tqw.c         **** #define STARTUP_SEQUENCE_DELAY (8)
+ 194:tqw.c         **** static void doStartupSequence(void)
+ 195:tqw.c         **** {
+ 196:tqw.c         ****     uint8_t c;
+ 197:tqw.c         ****     for (c = 1; c < 8; c++) {
+ 198:tqw.c         ****         uint8_t n = 2;
+ 199:tqw.c         ****         for (n = 0; n < 2; n++) {
+ 200:tqw.c         **** 	        int8_t q;
+ 201:tqw.c         **** 	        for (q = 0; q < 8; q++) {
+ 202:tqw.c         **** 	            lightPixels(c, (uint8_t)BV(q));
+ 203:tqw.c         **** 	            TQWDelay(STARTUP_SEQUENCE_DELAY);
+ 204:tqw.c         **** 	        }
+ 205:tqw.c         **** 	        for (; q >= 0; q--) {
+ 206:tqw.c         **** 	            lightPixels(c, (uint8_t)BV(q));
+ 207:tqw.c         **** 	            TQWDelay(STARTUP_SEQUENCE_DELAY);
+ 208:tqw.c         **** 	        }
+ 209:tqw.c         **** 	    }
+ 210:tqw.c         ****     }
+ 211:tqw.c         ****     for (c = 0; c < 8; c++) {
+ 212:tqw.c         ****         lightPixels(c, (uint8_t)0xff);
+ 213:tqw.c         ****         TQWDelay(255);
+ 214:tqw.c         ****     }
+ 215:tqw.c         ****     for (c = 0; c < 8; c++) {
+ 216:tqw.c         **** 		TQWExtinguishLights();
+ 217:tqw.c         **** 		TQWDelay(255);
+ 218:tqw.c         **** 		lightPixels(7, (uint8_t)0xff);
+ 219:tqw.c         **** 		TQWDelay(255);
+ 220:tqw.c         ****     }
+ 221:tqw.c         ****     TQWExtinguishLights();
+ 222:tqw.c         **** }
+ 223:tqw.c         **** 
+ 224:tqw.c         **** /* Enable eight output pins and three latch pins.
+ 225:tqw.c         ****  */
+ 226:tqw.c         **** static void enablePins(void)
+ 227:tqw.c         **** {
+ 228:tqw.c         ****     *((uint8_t *) DDRB) = BV(PB0);
+ 229:tqw.c         ****     *((uint8_t *) DDRC) =
+GAS LISTING /tmp/cc21ii16.s 			page 17
+
+
+ 230:tqw.c         ****         BV(PC0) + BV(PC1) + BV(PC2) + BV(PC3) + BV(PC4) + BV(PC5);
+ 231:tqw.c         ****     *((uint8_t *) DDRD) = BV(PD4) + BV(PD5) + BV(PD6) + BV(PD7);
+ 232:tqw.c         **** }
+ 233:tqw.c         **** 
+ 234:tqw.c         **** void TQWInit(void)
+ 235:tqw.c         **** {
+ 684               		.stabn 68,0,235,.LM72-TQWInit
+ 685               	.LM72:
+ 686               	/* prologue: frame size=0 */
+ 687 017a 1F93      		push r17
+ 688               	/* prologue end (size=1) */
+ 689               		.stabn 68,0,227,.LM73-TQWInit
+ 690               	.LM73:
+ 691               	.LBB11:
+ 692               		.stabn 68,0,228,.LM74-TQWInit
+ 693               	.LM74:
+ 694 017c 11E0      		ldi r17,lo8(1)
+ 695 017e 1093 1700 		sts 23,r17
+ 696               		.stabn 68,0,229,.LM75-TQWInit
+ 697               	.LM75:
+ 698 0182 4FE3      		ldi r20,lo8(63)
+ 699 0184 4093 1400 		sts 20,r20
+ 700               		.stabn 68,0,231,.LM76-TQWInit
+ 701               	.LM76:
+ 702 0188 30EF      		ldi r19,lo8(-16)
+ 703 018a 3093 1100 		sts 17,r19
+ 704               	.LBE11:
+ 236:tqw.c         ****     enablePins();
+ 237:tqw.c         ****     doStartupSequence();
+ 705               		.stabn 68,0,237,.LM77-TQWInit
+ 706               	.LM77:
+ 707 018e 0AD0      		rcall doStartupSequence
+ 708               		.stabn 68,0,75,.LM78-TQWInit
+ 709               	.LM78:
+ 710               	.LBB12:
+ 711               		.stabn 68,0,26,.LM79-TQWInit
+ 712               	.LM79:
+ 713               	.LBB13:
+ 714               		.stabn 68,0,28,.LM80-TQWInit
+ 715               	.LM80:
+ 716               	/* #APP */
+ 717 0190 19BF      		out 57,r17
+ 718               	/* #NOAPP */
+ 719               	.LBE13:
+ 720               	.LBE12:
+ 721               		.stabn 68,0,80,.LM81-TQWInit
+ 722               	.LM81:
+ 723               	.LBB14:
+ 724               		.stabn 68,0,82,.LM82-TQWInit
+ 725               	.LM82:
+ 726 0192 22E0      		ldi r18,lo8(2)
+ 727 0194 25BB      		out 53-0x20,r18
+ 728               		.stabn 68,0,15,.LM83-TQWInit
+ 729               	.LM83:
+ 730               	.LBB15:
+ 731 0196 10E4      		ldi r17,lo8(64)
+ 732               		.stabn 68,0,20,.LM84-TQWInit
+GAS LISTING /tmp/cc21ii16.s 			page 18
+
+
+ 733               	.LM84:
+ 734               	/* #APP */
+ 735 0198 1BBF      		out 59,r17
+ 736               	/* #NOAPP */
+ 737               	.LBE15:
+ 738               	.LBE14:
+ 739               		.stabn 68,0,70,.LM85-TQWInit
+ 740               	.LM85:
+ 741               	.LBB16:
+ 742               		.stabn 68,0,71,.LM86-TQWInit
+ 743               	.LM86:
+ 744 019a 13E0      		ldi r17,lo8(3)
+ 745 019c 1EB9      		out 46-0x20,r17
+ 746               	.LBE16:
+ 238:tqw.c         ****     enableTimer0Overflow();
+ 239:tqw.c         ****     enableExternalInterrupts();
+ 240:tqw.c         ****     startCounter1();
+ 241:tqw.c         ****     sei();
+ 747               		.stabn 68,0,241,.LM87-TQWInit
+ 748               	.LM87:
+ 749               	/* #APP */
+ 750 019e 7894      		sei
+ 242:tqw.c         **** }
+ 751               		.stabn 68,0,242,.LM88-TQWInit
+ 752               	.LM88:
+ 753               	/* #NOAPP */
+ 754               	/* epilogue: frame size=0 */
+ 755 01a0 1F91      		pop r17
+ 756 01a2 0895      		ret
+ 757               	/* epilogue end (size=2) */
+ 758               	/* function TQWInit size 24 (21) */
+ 759               	.Lfe16:
+ 760               		.size	TQWInit,.Lfe16-TQWInit
+ 761               		.stabs	"ints:r(0,11)",64,0,15,24
+ 762               		.stabn	192,0,0,.LBB15-TQWInit
+ 763               		.stabn	224,0,0,.LBE15-TQWInit
+ 764               	.Lscope15:
+ 765               		.stabs	"",36,0,0,.Lscope15-TQWInit
+ 766               		.stabs	"doStartupSequence:f(0,20)",36,0,195,doStartupSequence
+ 767               		.type	doStartupSequence,@function
+ 768               	doStartupSequence:
+ 769               		.stabn 68,0,195,.LM89-doStartupSequence
+ 770               	.LM89:
+ 771               	/* prologue: frame size=1 */
+ 772 01a4 AF92      		push r10
+ 773 01a6 BF92      		push r11
+ 774 01a8 CF92      		push r12
+ 775 01aa DF92      		push r13
+ 776 01ac FF92      		push r15
+ 777 01ae 0F93      		push r16
+ 778 01b0 1F93      		push r17
+ 779 01b2 CF93      		push r28
+ 780 01b4 DF93      		push r29
+ 781 01b6 CDB7      		in r28,__SP_L__
+ 782 01b8 DEB7      		in r29,__SP_H__
+ 783 01ba 2197      		sbiw r28,1
+ 784 01bc 0FB6      		in __tmp_reg__,__SREG__
+GAS LISTING /tmp/cc21ii16.s 			page 19
+
+
+ 785 01be F894      		cli
+ 786 01c0 DEBF      		out __SP_H__,r29
+ 787 01c2 0FBE      		out __SREG__,__tmp_reg__
+ 788 01c4 CDBF      		out __SP_L__,r28
+ 789               	/* prologue end (size=17) */
+ 790               		.stabn 68,0,197,.LM90-doStartupSequence
+ 791               	.LM90:
+ 792               	.LBB17:
+ 793 01c6 11E0      		ldi r17,lo8(1)
+ 794 01c8 91E0      		ldi r25,lo8(1)
+ 795 01ca A92E      		mov r10,r25
+ 796 01cc B12C      		mov r11,__zero_reg__
+ 797               	.L134:
+ 798               		.stabn 68,0,199,.LM91-doStartupSequence
+ 799               	.LM91:
+ 800               	.LBB18:
+ 801 01ce FF24      		clr r15
+ 802               	.L133:
+ 803               		.stabn 68,0,201,.LM92-doStartupSequence
+ 804               	.LM92:
+ 805               	.LBB19:
+ 806 01d0 00E0      		ldi r16,lo8(0)
+ 807               	.L111:
+ 808               		.stabn 68,0,202,.LM93-doStartupSequence
+ 809               	.LM93:
+ 810 01d2 C501      		movw r24,r10
+ 811 01d4 002E      		mov r0,r16
+ 812 01d6 02C0      		rjmp 2f
+ 813 01d8 880F      	1:	lsl r24
+ 814 01da 991F      		rol r25
+ 815 01dc 0A94      	2:	dec r0
+ 816 01de E2F7      		brpl 1b
+ 817 01e0 682F      		mov r22,r24
+ 818 01e2 812F      		mov r24,r17
+ 819 01e4 98D0      		rcall lightPixels
+ 820               		.stabn 68,0,89,.LM94-doStartupSequence
+ 821               	.LM94:
+ 822               	.LBB20:
+ 823               	.LBB21:
+ 824 01e6 30E0      		ldi r19,lo8(0)
+ 825               	.L109:
+ 826               		.stabn 68,0,90,.LM95-doStartupSequence
+ 827               	.LM95:
+ 828 01e8 20E0      		ldi r18,lo8(0)
+ 829               	.L108:
+ 830               		.stabn 68,0,91,.LM96-doStartupSequence
+ 831               	.LM96:
+ 832 01ea 90E0      		ldi r25,lo8(0)
+ 833               	.L107:
+ 834               		.stabn 68,0,92,.LM97-doStartupSequence
+ 835               	.LM97:
+ 836               	.LBB22:
+ 837 01ec 1982      		std Y+1,__zero_reg__
+ 838               		.stabn 68,0,93,.LM98-doStartupSequence
+ 839               	.LM98:
+ 840 01ee 4981      		ldd r20,Y+1
+ 841 01f0 4F5F      		subi r20,lo8(-(1))
+GAS LISTING /tmp/cc21ii16.s 			page 20
+
+
+ 842 01f2 4983      		std Y+1,r20
+ 843               		.stabn 68,0,91,.LM99-doStartupSequence
+ 844               	.LM99:
+ 845               	.LBE22:
+ 846 01f4 9F5F      		subi r25,lo8(-(1))
+ 847 01f6 9032      		cpi r25,lo8(32)
+ 848 01f8 C8F3      		brlo .L107
+ 849               		.stabn 68,0,90,.LM100-doStartupSequence
+ 850               	.LM100:
+ 851 01fa 2F5F      		subi r18,lo8(-(1))
+ 852 01fc 2032      		cpi r18,lo8(32)
+ 853 01fe A8F3      		brlo .L108
+ 854               		.stabn 68,0,89,.LM101-doStartupSequence
+ 855               	.LM101:
+ 856 0200 3F5F      		subi r19,lo8(-(1))
+ 857 0202 3830      		cpi r19,lo8(8)
+ 858 0204 88F3      		brlo .L109
+ 859               		.stabn 68,0,201,.LM102-doStartupSequence
+ 860               	.LM102:
+ 861               	.LBE21:
+ 862               	.LBE20:
+ 863 0206 0F5F      		subi r16,lo8(-(1))
+ 864 0208 0830      		cpi r16,lo8(8)
+ 865 020a 1CF3      		brlt .L111
+ 866               		.stabn 68,0,205,.LM103-doStartupSequence
+ 867               	.LM103:
+ 868 020c 0023      		tst r16
+ 869 020e FCF0      		brlt .L390
+ 870 0210 81E0      		ldi r24,lo8(1)
+ 871 0212 C82E      		mov r12,r24
+ 872 0214 D12C      		mov r13,__zero_reg__
+ 873               	.L132:
+ 874               		.stabn 68,0,206,.LM104-doStartupSequence
+ 875               	.LM104:
+ 876 0216 C601      		movw r24,r12
+ 877 0218 002E      		mov r0,r16
+ 878 021a 02C0      		rjmp 2f
+ 879 021c 880F      	1:	lsl r24
+ 880 021e 991F      		rol r25
+ 881 0220 0A94      	2:	dec r0
+ 882 0222 E2F7      		brpl 1b
+ 883 0224 682F      		mov r22,r24
+ 884 0226 812F      		mov r24,r17
+ 885 0228 76D0      		rcall lightPixels
+ 886               		.stabn 68,0,89,.LM105-doStartupSequence
+ 887               	.LM105:
+ 888               	.LBB23:
+ 889               	.LBB24:
+ 890 022a 30E0      		ldi r19,lo8(0)
+ 891               	.L130:
+ 892               		.stabn 68,0,90,.LM106-doStartupSequence
+ 893               	.LM106:
+ 894 022c 20E0      		ldi r18,lo8(0)
+ 895               	.L129:
+ 896               		.stabn 68,0,91,.LM107-doStartupSequence
+ 897               	.LM107:
+ 898 022e 90E0      		ldi r25,lo8(0)
+GAS LISTING /tmp/cc21ii16.s 			page 21
+
+
+ 899               	.L128:
+ 900               		.stabn 68,0,92,.LM108-doStartupSequence
+ 901               	.LM108:
+ 902               	.LBB25:
+ 903 0230 1982      		std Y+1,__zero_reg__
+ 904               		.stabn 68,0,93,.LM109-doStartupSequence
+ 905               	.LM109:
+ 906 0232 4981      		ldd r20,Y+1
+ 907 0234 4F5F      		subi r20,lo8(-(1))
+ 908 0236 4983      		std Y+1,r20
+ 909               		.stabn 68,0,91,.LM110-doStartupSequence
+ 910               	.LM110:
+ 911               	.LBE25:
+ 912 0238 9F5F      		subi r25,lo8(-(1))
+ 913 023a 9032      		cpi r25,lo8(32)
+ 914 023c C8F3      		brlo .L128
+ 915               		.stabn 68,0,90,.LM111-doStartupSequence
+ 916               	.LM111:
+ 917 023e 2F5F      		subi r18,lo8(-(1))
+ 918 0240 2032      		cpi r18,lo8(32)
+ 919 0242 A8F3      		brlo .L129
+ 920               		.stabn 68,0,89,.LM112-doStartupSequence
+ 921               	.LM112:
+ 922 0244 3F5F      		subi r19,lo8(-(1))
+ 923 0246 3830      		cpi r19,lo8(8)
+ 924 0248 88F3      		brlo .L130
+ 925               		.stabn 68,0,205,.LM113-doStartupSequence
+ 926               	.LM113:
+ 927               	.LBE24:
+ 928               	.LBE23:
+ 929 024a 0150      		subi r16,lo8(-(-1))
+ 930 024c 22F7      		brpl .L132
+ 931               	.L390:
+ 932               		.stabn 68,0,199,.LM114-doStartupSequence
+ 933               	.LM114:
+ 934               	.LBE19:
+ 935 024e F394      		inc r15
+ 936 0250 81E0      		ldi r24,lo8(1)
+ 937 0252 8F15      		cp r24,r15
+ 938 0254 08F0      		brlo _PC_+2
+ 939 0256 BCCF      		rjmp .L133
+ 940               		.stabn 68,0,197,.LM115-doStartupSequence
+ 941               	.LM115:
+ 942               	.LBE18:
+ 943 0258 180F      		add r17,r24
+ 944 025a 1830      		cpi r17,lo8(8)
+ 945 025c 08F4      		brsh _PC_+2
+ 946 025e B7CF      		rjmp .L134
+ 947               		.stabn 68,0,211,.LM116-doStartupSequence
+ 948               	.LM116:
+ 949 0260 10E0      		ldi r17,lo8(0)
+ 950               	.L155:
+ 951               		.stabn 68,0,212,.LM117-doStartupSequence
+ 952               	.LM117:
+ 953 0262 6FEF      		ldi r22,lo8(-1)
+ 954 0264 812F      		mov r24,r17
+ 955 0266 57D0      		rcall lightPixels
+GAS LISTING /tmp/cc21ii16.s 			page 22
+
+
+ 956               		.stabn 68,0,89,.LM118-doStartupSequence
+ 957               	.LM118:
+ 958               	.LBB26:
+ 959               	.LBB27:
+ 960 0268 30E0      		ldi r19,lo8(0)
+ 961               	.L153:
+ 962               		.stabn 68,0,90,.LM119-doStartupSequence
+ 963               	.LM119:
+ 964 026a 20E0      		ldi r18,lo8(0)
+ 965               	.L152:
+ 966               		.stabn 68,0,91,.LM120-doStartupSequence
+ 967               	.LM120:
+ 968 026c 90E0      		ldi r25,lo8(0)
+ 969               	.L151:
+ 970               		.stabn 68,0,92,.LM121-doStartupSequence
+ 971               	.LM121:
+ 972               	.LBB28:
+ 973 026e 1982      		std Y+1,__zero_reg__
+ 974               		.stabn 68,0,93,.LM122-doStartupSequence
+ 975               	.LM122:
+ 976 0270 0981      		ldd r16,Y+1
+ 977 0272 0F5F      		subi r16,lo8(-(1))
+ 978 0274 0983      		std Y+1,r16
+ 979               		.stabn 68,0,91,.LM123-doStartupSequence
+ 980               	.LM123:
+ 981               	.LBE28:
+ 982 0276 9F5F      		subi r25,lo8(-(1))
+ 983 0278 9032      		cpi r25,lo8(32)
+ 984 027a C8F3      		brlo .L151
+ 985               		.stabn 68,0,90,.LM124-doStartupSequence
+ 986               	.LM124:
+ 987 027c 2F5F      		subi r18,lo8(-(1))
+ 988 027e 2032      		cpi r18,lo8(32)
+ 989 0280 A8F3      		brlo .L152
+ 990               		.stabn 68,0,89,.LM125-doStartupSequence
+ 991               	.LM125:
+ 992 0282 3F5F      		subi r19,lo8(-(1))
+ 993 0284 3F3F      		cpi r19,lo8(-1)
+ 994 0286 88F3      		brlo .L153
+ 995               		.stabn 68,0,211,.LM126-doStartupSequence
+ 996               	.LM126:
+ 997               	.LBE27:
+ 998               	.LBE26:
+ 999 0288 1F5F      		subi r17,lo8(-(1))
+ 1000 028a 1830      		cpi r17,lo8(8)
+ 1001 028c 50F3      		brlo .L155
+ 1002               		.stabn 68,0,215,.LM127-doStartupSequence
+ 1003               	.LM127:
+ 1004 028e 10E0      		ldi r17,lo8(0)
+ 1005               	.L206:
+ 1006               		.stabn 68,0,165,.LM128-doStartupSequence
+ 1007               	.LM128:
+ 1008               	.LBB29:
+ 1009 0290 80E0      		ldi r24,lo8(0)
+ 1010 0292 15DF      		rcall TQWLoadLatch
+ 1011               		.stabn 68,0,150,.LM129-doStartupSequence
+ 1012               	.LM129:
+GAS LISTING /tmp/cc21ii16.s 			page 23
+
+
+ 1013               	.LBB30:
+ 1014               	/* #APP */
+ 1015 0294 C09A      		sbi 24,0
+ 1016 0296 C098      		cbi 24,0
+ 1017               		.stabn 68,0,167,.LM130-doStartupSequence
+ 1018               	.LM130:
+ 1019               	/* #NOAPP */
+ 1020               	.LBE30:
+ 1021 0298 61DF      		rcall TQWStrobeGreen
+ 1022               		.stabn 68,0,168,.LM131-doStartupSequence
+ 1023               	.LM131:
+ 1024 029a 63DF      		rcall TQWStrobeBlue
+ 1025               		.stabn 68,0,89,.LM132-doStartupSequence
+ 1026               	.LM132:
+ 1027               	.LBE29:
+ 1028               	.LBB31:
+ 1029               	.LBB32:
+ 1030 029c 30E0      		ldi r19,lo8(0)
+ 1031               	.L188:
+ 1032               		.stabn 68,0,90,.LM133-doStartupSequence
+ 1033               	.LM133:
+ 1034 029e 20E0      		ldi r18,lo8(0)
+ 1035               	.L187:
+ 1036               		.stabn 68,0,91,.LM134-doStartupSequence
+ 1037               	.LM134:
+ 1038 02a0 90E0      		ldi r25,lo8(0)
+ 1039               	.L186:
+ 1040               		.stabn 68,0,92,.LM135-doStartupSequence
+ 1041               	.LM135:
+ 1042               	.LBB33:
+ 1043 02a2 1982      		std Y+1,__zero_reg__
+ 1044               		.stabn 68,0,93,.LM136-doStartupSequence
+ 1045               	.LM136:
+ 1046 02a4 5981      		ldd r21,Y+1
+ 1047 02a6 5F5F      		subi r21,lo8(-(1))
+ 1048 02a8 5983      		std Y+1,r21
+ 1049               		.stabn 68,0,91,.LM137-doStartupSequence
+ 1050               	.LM137:
+ 1051               	.LBE33:
+ 1052 02aa 9F5F      		subi r25,lo8(-(1))
+ 1053 02ac 9032      		cpi r25,lo8(32)
+ 1054 02ae C8F3      		brlo .L186
+ 1055               		.stabn 68,0,90,.LM138-doStartupSequence
+ 1056               	.LM138:
+ 1057 02b0 2F5F      		subi r18,lo8(-(1))
+ 1058 02b2 2032      		cpi r18,lo8(32)
+ 1059 02b4 A8F3      		brlo .L187
+ 1060               		.stabn 68,0,89,.LM139-doStartupSequence
+ 1061               	.LM139:
+ 1062 02b6 3F5F      		subi r19,lo8(-(1))
+ 1063 02b8 3F3F      		cpi r19,lo8(-1)
+ 1064 02ba 88F3      		brlo .L188
+ 1065               		.stabn 68,0,218,.LM140-doStartupSequence
+ 1066               	.LM140:
+ 1067               	.LBE32:
+ 1068               	.LBE31:
+ 1069 02bc 6FEF      		ldi r22,lo8(-1)
+GAS LISTING /tmp/cc21ii16.s 			page 24
+
+
+ 1070 02be 87E0      		ldi r24,lo8(7)
+ 1071 02c0 2AD0      		rcall lightPixels
+ 1072               		.stabn 68,0,89,.LM141-doStartupSequence
+ 1073               	.LM141:
+ 1074               	.LBB34:
+ 1075               	.LBB35:
+ 1076 02c2 30E0      		ldi r19,lo8(0)
+ 1077               	.L204:
+ 1078               		.stabn 68,0,90,.LM142-doStartupSequence
+ 1079               	.LM142:
+ 1080 02c4 20E0      		ldi r18,lo8(0)
+ 1081               	.L203:
+ 1082               		.stabn 68,0,91,.LM143-doStartupSequence
+ 1083               	.LM143:
+ 1084 02c6 90E0      		ldi r25,lo8(0)
+ 1085               	.L202:
+ 1086               		.stabn 68,0,92,.LM144-doStartupSequence
+ 1087               	.LM144:
+ 1088               	.LBB36:
+ 1089 02c8 1982      		std Y+1,__zero_reg__
+ 1090               		.stabn 68,0,93,.LM145-doStartupSequence
+ 1091               	.LM145:
+ 1092 02ca 6981      		ldd r22,Y+1
+ 1093 02cc 6F5F      		subi r22,lo8(-(1))
+ 1094 02ce 6983      		std Y+1,r22
+ 1095               		.stabn 68,0,91,.LM146-doStartupSequence
+ 1096               	.LM146:
+ 1097               	.LBE36:
+ 1098 02d0 9F5F      		subi r25,lo8(-(1))
+ 1099 02d2 9032      		cpi r25,lo8(32)
+ 1100 02d4 C8F3      		brlo .L202
+ 1101               		.stabn 68,0,90,.LM147-doStartupSequence
+ 1102               	.LM147:
+ 1103 02d6 2F5F      		subi r18,lo8(-(1))
+ 1104 02d8 2032      		cpi r18,lo8(32)
+ 1105 02da A8F3      		brlo .L203
+ 1106               		.stabn 68,0,89,.LM148-doStartupSequence
+ 1107               	.LM148:
+ 1108 02dc 3F5F      		subi r19,lo8(-(1))
+ 1109 02de 3F3F      		cpi r19,lo8(-1)
+ 1110 02e0 88F3      		brlo .L204
+ 1111               		.stabn 68,0,215,.LM149-doStartupSequence
+ 1112               	.LM149:
+ 1113               	.LBE35:
+ 1114               	.LBE34:
+ 1115 02e2 1F5F      		subi r17,lo8(-(1))
+ 1116 02e4 1830      		cpi r17,lo8(8)
+ 1117 02e6 A0F2      		brlo .L206
+ 1118 02e8 20E0      		ldi r18,lo8(0)
+ 1119               		.stabn 68,0,165,.LM150-doStartupSequence
+ 1120               	.LM150:
+ 1121               	.LBB37:
+ 1122 02ea 822F      		mov r24,r18
+ 1123 02ec E8DE      		rcall TQWLoadLatch
+ 1124               		.stabn 68,0,150,.LM151-doStartupSequence
+ 1125               	.LM151:
+ 1126               	.LBB38:
+GAS LISTING /tmp/cc21ii16.s 			page 25
+
+
+ 1127               	/* #APP */
+ 1128 02ee C09A      		sbi 24,0
+ 1129 02f0 C098      		cbi 24,0
+ 1130               		.stabn 68,0,167,.LM152-doStartupSequence
+ 1131               	.LM152:
+ 1132               	/* #NOAPP */
+ 1133               	.LBE38:
+ 1134 02f2 34DF      		rcall TQWStrobeGreen
+ 1135               		.stabn 68,0,168,.LM153-doStartupSequence
+ 1136               	.LM153:
+ 1137 02f4 36DF      		rcall TQWStrobeBlue
+ 1138               		.stabn 68,0,222,.LM154-doStartupSequence
+ 1139               	.LM154:
+ 1140               	.LBE37:
+ 1141               	.LBE17:
+ 1142               	/* epilogue: frame size=1 */
+ 1143 02f6 2196      		adiw r28,1
+ 1144 02f8 0FB6      		in __tmp_reg__,__SREG__
+ 1145 02fa F894      		cli
+ 1146 02fc DEBF      		out __SP_H__,r29
+ 1147 02fe 0FBE      		out __SREG__,__tmp_reg__
+ 1148 0300 CDBF      		out __SP_L__,r28
+ 1149 0302 DF91      		pop r29
+ 1150 0304 CF91      		pop r28
+ 1151 0306 1F91      		pop r17
+ 1152 0308 0F91      		pop r16
+ 1153 030a FF90      		pop r15
+ 1154 030c DF90      		pop r13
+ 1155 030e CF90      		pop r12
+ 1156 0310 BF90      		pop r11
+ 1157 0312 AF90      		pop r10
+ 1158 0314 0895      		ret
+ 1159               	/* epilogue end (size=16) */
+ 1160               	/* function doStartupSequence size 190 (157) */
+ 1161               	.Lfe17:
+ 1162               		.size	doStartupSequence,.Lfe17-doStartupSequence
+ 1163               		.stabs	"c:r(3,2)",64,0,196,17
+ 1164               		.stabn	192,0,0,.LBB17-doStartupSequence
+ 1165               		.stabs	"n:r(3,2)",64,0,198,15
+ 1166               		.stabn	192,0,0,.LBB18-doStartupSequence
+ 1167               		.stabs	"q:r(3,1)",64,0,200,16
+ 1168               		.stabn	192,0,0,.LBB19-doStartupSequence
+ 1169               		.stabs	"i:r(3,2)",64,0,88,19
+ 1170               		.stabs	"j:r(3,2)",64,0,88,18
+ 1171               		.stabs	"k:r(3,2)",64,0,88,25
+ 1172               		.stabn	192,0,0,.LBB21-doStartupSequence
+ 1173               		.stabs	"x:(1,2)",128,0,92,1
+ 1174               		.stabn	192,0,0,.LBB22-doStartupSequence
+ 1175               		.stabn	224,0,0,.LBE22-doStartupSequence
+ 1176               		.stabn	224,0,0,.LBE21-doStartupSequence
+ 1177               		.stabs	"i:r(3,2)",64,0,88,19
+ 1178               		.stabs	"j:r(3,2)",64,0,88,18
+ 1179               		.stabs	"k:r(3,2)",64,0,88,25
+ 1180               		.stabn	192,0,0,.LBB24-doStartupSequence
+ 1181               		.stabs	"x:(1,2)",128,0,92,1
+ 1182               		.stabn	192,0,0,.LBB25-doStartupSequence
+ 1183               		.stabn	224,0,0,.LBE25-doStartupSequence
+GAS LISTING /tmp/cc21ii16.s 			page 26
+
+
+ 1184               		.stabn	224,0,0,.LBE24-doStartupSequence
+ 1185               		.stabn	224,0,0,.LBE19-doStartupSequence
+ 1186               		.stabn	224,0,0,.LBE18-doStartupSequence
+ 1187               		.stabs	"i:r(3,2)",64,0,88,19
+ 1188               		.stabs	"j:r(3,2)",64,0,88,18
+ 1189               		.stabs	"k:r(3,2)",64,0,88,25
+ 1190               		.stabn	192,0,0,.LBB27-doStartupSequence
+ 1191               		.stabs	"x:(1,2)",128,0,92,1
+ 1192               		.stabn	192,0,0,.LBB28-doStartupSequence
+ 1193               		.stabn	224,0,0,.LBE28-doStartupSequence
+ 1194               		.stabn	224,0,0,.LBE27-doStartupSequence
+ 1195               		.stabs	"i:r(3,2)",64,0,88,19
+ 1196               		.stabs	"j:r(3,2)",64,0,88,18
+ 1197               		.stabs	"k:r(3,2)",64,0,88,25
+ 1198               		.stabn	192,0,0,.LBB32-doStartupSequence
+ 1199               		.stabs	"x:(1,2)",128,0,92,1
+ 1200               		.stabn	192,0,0,.LBB33-doStartupSequence
+ 1201               		.stabn	224,0,0,.LBE33-doStartupSequence
+ 1202               		.stabn	224,0,0,.LBE32-doStartupSequence
+ 1203               		.stabs	"i:r(3,2)",64,0,88,19
+ 1204               		.stabs	"j:r(3,2)",64,0,88,18
+ 1205               		.stabs	"k:r(3,2)",64,0,88,25
+ 1206               		.stabn	192,0,0,.LBB35-doStartupSequence
+ 1207               		.stabs	"x:(1,2)",128,0,92,1
+ 1208               		.stabn	192,0,0,.LBB36-doStartupSequence
+ 1209               		.stabn	224,0,0,.LBE36-doStartupSequence
+ 1210               		.stabn	224,0,0,.LBE35-doStartupSequence
+ 1211               		.stabn	224,0,0,.LBE17-doStartupSequence
+ 1212               	.Lscope16:
+ 1213               		.stabs	"",36,0,0,.Lscope16-doStartupSequence
+ 1214               		.stabs	"lightPixels:f(0,20)",36,0,172,lightPixels
+ 1215               		.stabs	"color:P(3,2)",64,0,171,28
+ 1216               		.stabs	"pixels:P(3,2)",64,0,171,17
+ 1217               		.type	lightPixels,@function
+ 1218               	lightPixels:
+ 1219               		.stabn 68,0,172,.LM155-lightPixels
+ 1220               	.LM155:
+ 1221               	/* prologue: frame size=0 */
+ 1222 0316 1F93      		push r17
+ 1223 0318 CF93      		push r28
+ 1224               	/* prologue end (size=2) */
+ 1225 031a C82F      		mov r28,r24
+ 1226 031c 162F      		mov r17,r22
+ 1227               		.stabn 68,0,173,.LM156-lightPixels
+ 1228               	.LM156:
+ 1229 031e 8170      		andi r24,lo8(1)
+ 1230 0320 C0FF      		sbrs r28,0
+ 1231 0322 01C0      		rjmp .L37
+ 1232               		.stabn 68,0,174,.LM157-lightPixels
+ 1233               	.LM157:
+ 1234 0324 862F      		mov r24,r22
+ 1235               	.L37:
+ 1236               		.stabn 68,0,176,.LM158-lightPixels
+ 1237               	.LM158:
+ 1238 0326 CBDE      		rcall TQWLoadLatch
+ 1239               		.stabn 68,0,150,.LM159-lightPixels
+ 1240               	.LM159:
+GAS LISTING /tmp/cc21ii16.s 			page 27
+
+
+ 1241               	.LBB39:
+ 1242               	/* #APP */
+ 1243 0328 C09A      		sbi 24,0
+ 1244 032a C098      		cbi 24,0
+ 1245               		.stabn 68,0,179,.LM160-lightPixels
+ 1246               	.LM160:
+ 1247               	/* #NOAPP */
+ 1248               	.LBE39:
+ 1249 032c 8C2F      		mov r24,r28
+ 1250 032e 8270      		andi r24,lo8(2)
+ 1251 0330 C1FF      		sbrs r28,1
+ 1252 0332 01C0      		rjmp .L52
+ 1253               		.stabn 68,0,180,.LM161-lightPixels
+ 1254               	.LM161:
+ 1255 0334 812F      		mov r24,r17
+ 1256               	.L52:
+ 1257               		.stabn 68,0,182,.LM162-lightPixels
+ 1258               	.LM162:
+ 1259 0336 C3DE      		rcall TQWLoadLatch
+ 1260               		.stabn 68,0,155,.LM163-lightPixels
+ 1261               	.LM163:
+ 1262               	.LBB40:
+ 1263               	/* #APP */
+ 1264 0338 949A      		sbi 18,4
+ 1265 033a 9498      		cbi 18,4
+ 1266               		.stabn 68,0,185,.LM164-lightPixels
+ 1267               	.LM164:
+ 1268               	/* #NOAPP */
+ 1269               	.LBE40:
+ 1270 033c 8C2F      		mov r24,r28
+ 1271 033e 8470      		andi r24,lo8(4)
+ 1272 0340 C2FF      		sbrs r28,2
+ 1273 0342 01C0      		rjmp .L67
+ 1274               		.stabn 68,0,186,.LM165-lightPixels
+ 1275               	.LM165:
+ 1276 0344 812F      		mov r24,r17
+ 1277               	.L67:
+ 1278               		.stabn 68,0,188,.LM166-lightPixels
+ 1279               	.LM166:
+ 1280 0346 BBDE      		rcall TQWLoadLatch
+ 1281               		.stabn 68,0,160,.LM167-lightPixels
+ 1282               	.LM167:
+ 1283               	.LBB41:
+ 1284               	/* #APP */
+ 1285 0348 959A      		sbi 18,5
+ 1286 034a 9598      		cbi 18,5
+ 1287               		.stabn 68,0,191,.LM168-lightPixels
+ 1288               	.LM168:
+ 1289               	/* #NOAPP */
+ 1290               	.LBE41:
+ 1291               	/* epilogue: frame size=0 */
+ 1292 034c CF91      		pop r28
+ 1293 034e 1F91      		pop r17
+ 1294 0350 0895      		ret
+ 1295               	/* epilogue end (size=3) */
+ 1296               	/* function lightPixels size 36 (31) */
+ 1297               	.Lfe18:
+GAS LISTING /tmp/cc21ii16.s 			page 28
+
+
+ 1298               		.size	lightPixels,.Lfe18-lightPixels
+ 1299               	.Lscope17:
+ 1300               		.stabs	"",36,0,0,.Lscope17-lightPixels
+ 1301               		.stabs	"g_timer0StartValue:G(1,2)",32,0,7,0
+ 1302               		.stabs	"g_rotationInterruptHandler:G(1,3)=B(2,1)",32,0,8,0
+ 1303               		.stabs	"g_columnInterruptHandler:G(1,4)=B(2,4)",32,0,9,0
+ 1304               		.text
+ 1305               		.stabs "",100,0,0,Letext
+ 1306               	Letext:
+ 1307               	/* File tqw.c: code  457 = 0x01c9 ( 317), prologues  64, epilogues  76 */
+GAS LISTING /tmp/cc21ii16.s 			page 29
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 tqw.c
+                            *ABS*:0000003f __SREG__
+                            *ABS*:0000003e __SP_H__
+                            *ABS*:0000003d __SP_L__
+                            *ABS*:00000000 __tmp_reg__
+                            *ABS*:00000001 __zero_reg__
+                            *ABS*:00000002 _PC_
+     /tmp/cc21ii16.s:86     .data:00000000 g_timer0StartValue
+     /tmp/cc21ii16.s:91     .data:00000001 g_rotationInterruptHandler
+     /tmp/cc21ii16.s:96     .data:00000003 g_columnInterruptHandler
+     /tmp/cc21ii16.s:102    .text:00000000 _vector_9
+     /tmp/cc21ii16.s:171    .text:00000060 _vector_1
+     /tmp/cc21ii16.s:241    .text:000000be TQWLoadLatch
+     /tmp/cc21ii16.s:298    .text:000000da enable_external_int
+     /tmp/cc21ii16.s:322    .text:000000de timer_enable_int
+     /tmp/cc21ii16.s:346    .text:000000e2 TQWDelay
+     /tmp/cc21ii16.s:434    .text:0000012e TQWSetRotationInterrupt
+     /tmp/cc21ii16.s:456    .text:00000138 TQWGetAndResetRotationInterruptTime
+     /tmp/cc21ii16.s:490    .text:00000142 TQWSetColumnInterrupt
+     /tmp/cc21ii16.s:513    .text:0000014c TQWSetColumnInterruptTimer
+     /tmp/cc21ii16.s:534    .text:00000152 TQWSleepColumnInterruptTimer
+     /tmp/cc21ii16.s:559    .text:00000156 TQWStrobeRed
+     /tmp/cc21ii16.s:583    .text:0000015c TQWStrobeGreen
+     /tmp/cc21ii16.s:607    .text:00000162 TQWStrobeBlue
+     /tmp/cc21ii16.s:631    .text:00000168 TQWExtinguishLights
+     /tmp/cc21ii16.s:683    .text:0000017a TQWInit
+     /tmp/cc21ii16.s:768    .text:000001a4 doStartupSequence
+     /tmp/cc21ii16.s:1218   .text:00000316 lightPixels
+     /tmp/cc21ii16.s:1306   .text:00000352 Letext
+                            *ABS*:00000000 *ABS*
+
+NO UNDEFINED SYMBOLS

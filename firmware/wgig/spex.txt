@@ -1,0 +1,207 @@
+Michael Tsao writes:
+ > >Michael Tsao writes:
+ > >  > A couple of friends and I are working on an art project. Details
+ > >  > here: <http://www.sowbug.com/tqw/>.
+ > >  >
+ > >  > We need someone to write code to present graphics on an Atmel AVR
+ > >  > ATMega8 microcontroller. The display is a column of multicolor LEDs
+ > >  > that sweep in a circle, forming a virtual 128x8 circular
+ > >  > screen. Program space is really tight (1024 bytes SRAM, 8K program,
+ > >  > 32K content) so every bit counts. Environment is C in GNU GCC. You
+ > >  > can use Atmel AVR assembly if you want.
+ > >  >
+ > >  > There are 74 days left before the exhibition in August. The PCBs
+ > >  > arrive from the factory in about a month, but coding is happening
+ > >  > now. I'm working on other stuff (decoding RC5 from universal
+ > >  > remotes; general architecture) and don't have time for the
+ > >  > graphics. We can reprogram the flash the night before the
+ > >  > exhibition so we really have 74 coding days.
+
+ > 
+ > void TQWLoadLatch(unsigned char c);
+ > void TQWStrobeRed(void);
+ > void TQWStrobeGreen(void);
+ > void TQWStrobeBlue(void);
+ > 
+ > void TQWSetRotationInterrupt(void *f);
+ > unsigned short TQWGetAndResetRotationInterruptTime(void);
+ > 
+ > void TQWSetColumnInterrupt(void *f);
+ > void TQWSetColumnInterruptTimer(unsigned char t);
+ > 
+ > TQWLoadLatch puts the given byte into the latch. Each bit corresponds to a 
+ > pixel in the current column. I think the MSB is the top pixel... can't 
+ > remember.
+ > 
+ > The TQWStrobe[Red,Green,Blue] functions copy whatever's in the latch to the 
+ > specified column of lights.
+ > 
+ > TQWSetRotationInterrupt takes a function that gets called each time the 
+ > spinner starts a rotation.
+ > 
+ > TQWGetAndResetRotationInterruptTime returns the number of cycles that have 
+ > elapsed since the last time GetAndResetRotationInterruptTime was called.
+ > 
+ > TQWSetColumnInterrupt takes a function that gets called every X cycles, and 
+ > TQWSetColumnInterruptTimer sets X.
+ > 
+ > Here's the basic idea how these functions are used:
+ > 
+ > #include <tqw.h>
+ > 
+ > #define SCREEN_WIDTH (128)      /* 128 columns in the virtual screen */
+ > unsigned char g_column = 0;     /* 0..127 so a byte is OK */
+ > unsigned char g_r, g_g, g_b;    /* 8 bits each... 8 pixels in column */
+ > unsigned char g_next_column = 0;    /* This is a boolean. */
+ > 
+ > /* The rotation just began. Compute how wide we want each of the columns
+ > * in the rotation to be... in other words, divide the rotation into 128
+ > * equally sized columns, and ask to be interrupted when each of those 128
+ > * columns starts.
+ > */
+ > static void rotationInterrupt(void)
+ > {
+ >     unsigned short t = GetAndResetRotationInterruptTime();
+ >     SetColumnInterruptTimer(t / SCREEN_WIDTH);
+ >     g_column = 0;
+ > }
+ > 
+ > /* This function gets called periodically, according to whatever we set in
+ > * SetColumnInterruptTimer(). We light up the three sets of pixels (three
+ > * 8-pixel columns of red, green, and blue lights).
+ > */
+ > static void columnInterrupt(void)
+ > {
+ >     /* If we've already gone past the edge of the virtual screen, just turn
+ >      * off the lights and do nothing. This might happen if the motor stops
+ >      * running but the circuit's still going... we don't want a stationary
+ >      * spinner blinking idiotically all night long.
+ >      */
+ >     if (g_column >= SCREEN_WIDTH) {
+ >         TQWLoadLatch(0);
+ >         TQWStrobeRed();
+ >         TQWStrobeGreen();
+ >         TQWStrobeBlue();
+ >     } else {
+ >         /* We're still drawing the virtual screen. For each of the three
+ >          * colors, load up the latch with the right globals, then
+ >          * set the column of lights to match whatever's in the latch.
+ >          */
+ >         TQWLoadLatch(g_r);
+ >         TQWStrobeRed();
+ >         TQWLoadLatch(g_g);
+ >         TQWStrobeGreen();
+ >         TQWLoadLatch(g_b);
+ >         TQWStrobeBlue();
+ > 
+ >         /* Move to the next column.*/
+ >         g_column++;
+ > 
+ >         /* Signal to the main loop that we're ready for the next column
+ >          * in whatever's being drawn on the virtual screen.
+ >          */
+ >         g_next_column = 1;
+ >     }
+ > }
+ > 
+ > int main(void)
+ > {
+ >     TQWInit(); /* Just call this before whatever else. */
+ >     TQWSetRotationInterrupt(rotationInterrupt);
+ >     TQWSetColumnInterrupt(columnInterrupt);
+ >     do {
+ > 
+ >         /* Load the three globals with various values that'll produce
+ >          * a funky pattern. I have no idea how this would actually look.
+ >          */
+ >         g_r = (g_column * 2)  %  10;
+ >         g_g = (g_column * 7)  % 200;
+ >         g_b = (g_column * 17) % 255;
+ > 
+ >         /* Wait for the column interrupt to tell us that it's moved
+ >          * to the next column. Then reset the flag;
+ >          */
+ >         while (!g_next_column) do {};
+ >         g_next_column = 0;
+ > 
+ >     } while (1);
+ > }
+ > 
+ > That's a good example of the use of the functions. Notice the extensive use 
+ > of globals. This is a microcontroller... globals are OK.
+ > 
+ > If I were using my 128-column text buffer, I'd modify main() to look 
+ > something like this:
+ > 
+ > unsigned char g_red[SCREEN_WIDTH];
+ > unsigned char g_green[SCREEN_WIDTH];
+ > unsigned char g_blue[SCREEN_WIDTH];
+ > int main(void)
+ > {
+ >     TQWInit(); /* Just call this before whatever else. */
+ >     TQWSetRotationInterrupt(rotationInterrupt);
+ >     TQWSetColumnInterrupt(columnInterrupt);
+ > 
+ >     /* This function draws text into the g_red, g_green, and g_blue
+ >      * pixel buffers.
+ >      */
+ >     fillBufferWithString("Hello world!");
+ > 
+ >     do {
+ > 
+ >         /* Copy the current column from the buffer to the values we want
+ >          * displayed.
+ >          */
+ >         g_r = g_red[g_column];
+ >         g_g = g_blue[g_column];
+ >         g_b = g_blue[g_column];
+ > 
+ >         /* Wait for the column interrupt to tell us that it's moved
+ >          * to the next column. Then reset the flag;
+ >          */
+ >         while (!g_next_column) do {};
+ >         g_next_column = 0;
+ > 
+ >     } while (1);
+ > }
+ > 
+ > Actually, I wouldn't do this... I'd modify columnInterrupt() to grab the
+ > values right out of the pixel buffer so that the main loop could concentrate
+ > on stuff like new text to draw into the buffer. As it is, the main loop is
+ > mostly concerned with which column is currently being drawn, and the purpose
+ > of the pixel buffer was to allow the two different loops (drawing and 
+ > rendering)
+ > to share the pixel buffer but otherwise work independently.
+ > 
+ > That should tide you over until Tuesday.
+
+-----
+
+- LSB is bit 0, which corresponds to the TOP light in the display. Let me 
+say that again in twelve different ways to be sure: bits 0-7 correspond to 
+pins 0-7 of the MCU's port, and the circuit is wired so that pin 0 goes to 
+the top light, pin 1 the second below that, all the way to pin 7 controlling 
+the bottom light. LSB top, MSB bottom.
+
+- And in any event, if push came to shove, we could just flip the lights -- 
+they're connected by a ribbon cable to the circuit.
+
+- I realized that *I* don't need the multicolor lights. In fact if I get as 
+far as I intend tonight, I can do most of my development on my simulator. So 
+I can send you the one prototype with the full color. Tell me your address?
+
+This sounds pretty exciting.... I can't wait to try it out!
+
+Another thing: you're going to need a 500mA power adapter for the STK500. 9 
+or 12 volts is fine; it needs at least 7.5. I think it'll run up to 30 volts 
+but Radio Shack doesn't sell that kind. And for the spinner itself, it's 
+most convenient to run it on a universal adapter, at least 300mA, with a 7.5 
+volt supply. I might be able to get a voltage regulator that will let you 
+run it off 12 volts. That'll make the motor run faster without frying the 
+circuit. There's no reason to order the adapter from DigiKey because you'll 
+get reamed in shipping and they're identical to whatever you'd get at Fry's 
+or Radio Shack.
+
+-------
+
+Anti-clockwise, so that the buffer is rendered left-to-right.

@@ -1,0 +1,313 @@
+Archive member included       because of file (symbol)
+
+/usr/local/avr/lib/gcc-lib/avr/3.0.1/../../../../avr/lib/libc.a(memcpy_P.o)
+                              tqw_text.o (memcpy_P)
+
+Allocating common symbols
+Common symbol       size              file
+
+g_buffer_remaining  0x1               tqw_text.o
+g_gbuf              0x80              tqw_text.o
+g_frames            0x1               tqw_text.o
+g_buffer_offset     0x1               tqw_text.o
+g_bbuf              0x80              tqw_text.o
+g_rbuf              0x80              tqw_text.o
+g_column            0x1               tqw_text.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00002000         xr
+data             0x00800060         0x00000400         rw !x
+eeprom           0x00810000         0x00000200         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD tqw.o
+LOAD tqw_text.o
+LOAD /usr/local/avr/lib/gcc-lib/avr/3.0.1/libgcc.a
+LOAD /usr/local/avr/lib/gcc-lib/avr/3.0.1/../../../../avr/lib/libc.a
+LOAD /usr/local/avr/lib/gcc-lib/avr/3.0.1/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0x7da
+ *(.init)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x00000000      0x234 tqw_text.o
+                0x00000000                smallFont
+                0x00000234                .=ALIGN(0x2)
+ *(.text)
+ .text          0x00000234      0x2a6 tqw.o
+                0x000004c4                TQWInit
+                0x000003a4                TQWStrobeRed
+                0x000004d6                timer_enable_int
+                0x000003b0                TQWStrobeBlue
+                0x00000314                TQWDelay
+                0x00000246                _vector_9
+                0x0000037e                TQWSetColumnInterruptTimer
+                0x00000360                TQWSetRotationInterrupt
+                0x00000388                TQWLoadLatch
+                0x0000036a                TQWGetAndResetRotationInterruptTime
+                0x000003aa                TQWStrobeGreen
+                0x000004d2                enable_external_int
+                0x000002a2                _vector_1
+                0x00000374                TQWSetColumnInterrupt
+                0x000003b6                TQWExtinguishLights
+                0x00000384                TQWSleepColumnInterruptTimer
+ .text          0x000004da      0x2e8 tqw_text.o
+                0x00000594                emit_character
+                0x0000079c                main
+ .text          0x000007c2       0x18 /usr/local/avr/lib/gcc-lib/avr/3.0.1/../../../../avr/lib/libc.a(memcpy_P.o)
+                0x000007c2                memcpy_P
+                0x000007da                .=ALIGN(0x2)
+ *(.text.*)
+                0x000007da                .=ALIGN(0x2)
+ *(.fini)
+                0x000007da                _etext=.
+
+.data           0x00800060       0x2e load address 0x000007da
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x5 tqw.o
+                0x00800061                g_rotationInterruptHandler
+                0x00800063                g_columnInterruptHandler
+                0x00800060                g_timer0StartValue
+ .data          0x00800065       0x28 tqw_text.o
+                0x00800067                hexDigits
+                0x00800065                g_program_counter
+ *(.gnu.linkonce.d*)
+ *fill*         0x0080008d        0x1
+                0x0080008e                .=ALIGN(0x2)
+                0x0080008e                _edata=.
+
+.bss            0x0080008e      0x184
+                0x0080008e                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(COMMON)
+ COMMON         0x0080008e      0x184 tqw_text.o
+                                  0x0 (size before relaxing)
+                0x0080008e                g_buffer_remaining
+                0x0080008f                g_gbuf
+                0x0080010f                g_frames
+                0x00800110                g_buffer_offset
+                0x00800111                g_bbuf
+                0x00800191                g_rbuf
+                0x00800211                g_column
+                0x00800212                PROVIDE (__bss_end, .)
+                0x00800212                _end=.
+
+.eeprom         0x00810000        0x0 load address 0x00000808
+ *(.eeprom*)
+                0x00810000                __eeprom_end=.
+
+.stab           0x00000000     0x17ac
+ *(.stab)
+ .stab          0x00000000      0xd8c tqw.o
+                                0xda4 (size before relaxing)
+ .stab          0x00000d8c      0x96c tqw_text.o
+                                0xb1c (size before relaxing)
+ .stab          0x000016f8       0xb4 /usr/local/avr/lib/gcc-lib/avr/3.0.1/../../../../avr/lib/libc.a(memcpy_P.o)
+                                 0xc0 (size before relaxing)
+
+.stabstr        0x00000000      0xea4
+ *(.stabstr)
+ .stabstr       0x00000000      0xea4 tqw.o
+                                  0x0 (size before relaxing)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+                0x0000045f                PROVIDE (__stack, 0x45f)
+OUTPUT(tqw.elf elf32-avr)
+
+Cross Reference Table
+
+Symbol                                            File
+TQWDelay                                          tqw.o
+                                                  tqw_text.o
+TQWExtinguishLights                               tqw.o
+                                                  tqw_text.o
+TQWGetAndResetRotationInterruptTime               tqw.o
+                                                  tqw_text.o
+TQWInit                                           tqw.o
+                                                  tqw_text.o
+TQWLoadLatch                                      tqw.o
+                                                  tqw_text.o
+TQWSetColumnInterrupt                             tqw.o
+                                                  tqw_text.o
+TQWSetColumnInterruptTimer                        tqw.o
+                                                  tqw_text.o
+TQWSetRotationInterrupt                           tqw.o
+                                                  tqw_text.o
+TQWSleepColumnInterruptTimer                      tqw.o
+                                                  tqw_text.o
+TQWStrobeBlue                                     tqw.o
+                                                  tqw_text.o
+TQWStrobeGreen                                    tqw.o
+                                                  tqw_text.o
+TQWStrobeRed                                      tqw.o
+                                                  tqw_text.o
+__stack                                           tqw_text.o
+_vector_1                                         tqw.o
+_vector_9                                         tqw.o
+emit_character                                    tqw_text.o
+enable_external_int                               tqw.o
+g_bbuf                                            tqw_text.o
+g_buffer_offset                                   tqw_text.o
+g_buffer_remaining                                tqw_text.o
+g_column                                          tqw_text.o
+g_columnInterruptHandler                          tqw.o
+g_frames                                          tqw_text.o
+g_gbuf                                            tqw_text.o
+g_program_counter                                 tqw_text.o
+g_rbuf                                            tqw_text.o
+g_rotationInterruptHandler                        tqw.o
+g_timer0StartValue                                tqw.o
+hexDigits                                         tqw_text.o
+main                                              tqw_text.o
+memcpy_P                                          /usr/local/avr/lib/gcc-lib/avr/3.0.1/../../../../avr/lib/libc.a(memcpy_P.o)
+                                                  tqw_text.o
+smallFont                                         tqw_text.o
+timer_enable_int                                  tqw.o

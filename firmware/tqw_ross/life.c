@@ -1,0 +1,1 @@
+../wgig/life.c
