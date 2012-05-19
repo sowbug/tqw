@@ -1,0 +1,26 @@
+EAGLE Version 4.09r1 Copyright (c) 1988-2002 CadSoft
+
+Electrical Rule Check for C:/Program Files/EAGLE-4.09r1/projects/tqw/main.sch at  6/23/2002 01:21:11a
+
+WARNING: Sheet 1/1: POWER Pin IC1 AVCC connected to VCC
+WARNING: Sheet 1/1: POWER Pin LED0 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED0 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED1 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED1 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED2 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED2 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED3 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED3 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED4 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED4 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED5 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED5 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED6 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED6 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED7 GND connected to ARM-GND
+WARNING: Sheet 1/1: POWER Pin LED7 GND connected to ARM-GND
+
+Board and schematic are consistent
+
+    0 errors
+   17 warnings
