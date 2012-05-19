@@ -1,3 +1,11 @@
+# THE QUOTING, WHIRLED
+
+The desert is a lonely place, especially at night.
+
+In August 2002, we made part of the Nevada desert a little bit friendlier by
+scattering 2,608 colorful, lighted messages across a 30' x 10' area of the
+[Black Rock City](http://www.burningman.com/) Playa.
+
 # THE QUOTING, WHIRLED: DEVELOPMENT
 
 ### Technical specifications
